@@ -213,7 +213,6 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Areas\Login\Controllers\LoginController.cs" />
     <Compile Include="Areas\Login\LoginAreaRegistration.cs" />
-    <Compile Include="Areas\Login\Models\UserLogin.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -279,6 +278,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Login\Models\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

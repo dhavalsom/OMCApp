@@ -14,3 +14,13 @@ D:\MyRepo\OMCApi\OMC.DAL.Library\obj\Debug\OMC.DAL.Library.csprojResolveAssembly
 D:\MyRepo\OMCApi\OMC.DAL.Library\obj\Debug\OMC.DAL.Library.csproj.CoreCompileInputs.cache
 D:\MyRepo\OMCApi\OMC.DAL.Library\obj\Debug\OMC.DAL.Library.dll
 D:\MyRepo\OMCApi\OMC.DAL.Library\obj\Debug\OMC.DAL.Library.pdb
+D:\MyRepo\OMC\OMCApp\OMCApi\OMC.DAL.Library\bin\Debug\OMC.DAL.Library.dll
+D:\MyRepo\OMC\OMCApp\OMCApi\OMC.DAL.Library\bin\Debug\OMC.DAL.Library.pdb
+D:\MyRepo\OMC\OMCApp\OMCApi\OMC.DAL.Library\bin\Debug\OMC.DAL.Interface.dll
+D:\MyRepo\OMC\OMCApp\OMCApi\OMC.DAL.Library\bin\Debug\OMC.Models.dll
+D:\MyRepo\OMC\OMCApp\OMCApi\OMC.DAL.Library\bin\Debug\OMC.DAL.Interface.pdb
+D:\MyRepo\OMC\OMCApp\OMCApi\OMC.DAL.Library\bin\Debug\OMC.Models.pdb
+D:\MyRepo\OMC\OMCApp\OMCApi\OMC.DAL.Library\obj\Debug\OMC.DAL.Library.csproj.CoreCompileInputs.cache
+D:\MyRepo\OMC\OMCApp\OMCApi\OMC.DAL.Library\obj\Debug\OMC.DAL.Library.dll
+D:\MyRepo\OMC\OMCApp\OMCApi\OMC.DAL.Library\obj\Debug\OMC.DAL.Library.pdb
+D:\MyRepo\OMC\OMCApp\OMCApi\OMC.DAL.Library\obj\Debug\OMC.DAL.Library.csprojResolveAssemblyReference.cache
