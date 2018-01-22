@@ -1,0 +1,10 @@
+C:\Users\Somaiya\source\repos\OMCApi\OMC.Models\bin\Debug\OMC.Models.dll
+C:\Users\Somaiya\source\repos\OMCApi\OMC.Models\bin\Debug\OMC.Models.pdb
+C:\Users\Somaiya\source\repos\OMCApi\OMC.Models\obj\Debug\OMC.Models.csproj.CoreCompileInputs.cache
+C:\Users\Somaiya\source\repos\OMCApi\OMC.Models\obj\Debug\OMC.Models.dll
+C:\Users\Somaiya\source\repos\OMCApi\OMC.Models\obj\Debug\OMC.Models.pdb
+D:\MyRepo\OMCApi\OMC.Models\bin\Debug\OMC.Models.dll
+D:\MyRepo\OMCApi\OMC.Models\bin\Debug\OMC.Models.pdb
+D:\MyRepo\OMCApi\OMC.Models\obj\Debug\OMC.Models.csproj.CoreCompileInputs.cache
+D:\MyRepo\OMCApi\OMC.Models\obj\Debug\OMC.Models.dll
+D:\MyRepo\OMCApi\OMC.Models\obj\Debug\OMC.Models.pdb

@@ -1,0 +1,14 @@
+C:\Users\Somaiya\source\repos\OMCApi\OMC.BL.Interface\bin\Debug\OMC.BL.Interface.dll
+C:\Users\Somaiya\source\repos\OMCApi\OMC.BL.Interface\bin\Debug\OMC.BL.Interface.pdb
+C:\Users\Somaiya\source\repos\OMCApi\OMC.BL.Interface\obj\Debug\OMC.BL.Interface.csprojResolveAssemblyReference.cache
+C:\Users\Somaiya\source\repos\OMCApi\OMC.BL.Interface\obj\Debug\OMC.BL.Interface.csproj.CoreCompileInputs.cache
+C:\Users\Somaiya\source\repos\OMCApi\OMC.BL.Interface\obj\Debug\OMC.BL.Interface.dll
+C:\Users\Somaiya\source\repos\OMCApi\OMC.BL.Interface\obj\Debug\OMC.BL.Interface.pdb
+D:\MyRepo\OMCApi\OMC.BL.Interface\bin\Debug\OMC.BL.Interface.dll
+D:\MyRepo\OMCApi\OMC.BL.Interface\bin\Debug\OMC.BL.Interface.pdb
+D:\MyRepo\OMCApi\OMC.BL.Interface\bin\Debug\OMC.Models.dll
+D:\MyRepo\OMCApi\OMC.BL.Interface\bin\Debug\OMC.Models.pdb
+D:\MyRepo\OMCApi\OMC.BL.Interface\obj\Debug\OMC.BL.Interface.csprojResolveAssemblyReference.cache
+D:\MyRepo\OMCApi\OMC.BL.Interface\obj\Debug\OMC.BL.Interface.csproj.CoreCompileInputs.cache
+D:\MyRepo\OMCApi\OMC.BL.Interface\obj\Debug\OMC.BL.Interface.dll
+D:\MyRepo\OMCApi\OMC.BL.Interface\obj\Debug\OMC.BL.Interface.pdb

@@ -1,0 +1,16 @@
+C:\Users\Somaiya\source\repos\OMCApi\OMC.DAL.Library\bin\Debug\OMC.DAL.Library.dll
+C:\Users\Somaiya\source\repos\OMCApi\OMC.DAL.Library\bin\Debug\OMC.DAL.Library.pdb
+C:\Users\Somaiya\source\repos\OMCApi\OMC.DAL.Library\obj\Debug\OMC.DAL.Library.csproj.CoreCompileInputs.cache
+C:\Users\Somaiya\source\repos\OMCApi\OMC.DAL.Library\obj\Debug\OMC.DAL.Library.dll
+C:\Users\Somaiya\source\repos\OMCApi\OMC.DAL.Library\obj\Debug\OMC.DAL.Library.pdb
+D:\MyRepo\OMCApi\OMC.DAL.Library\bin\Debug\OMC.DAL.Library.dll.config
+D:\MyRepo\OMCApi\OMC.DAL.Library\bin\Debug\OMC.DAL.Library.dll
+D:\MyRepo\OMCApi\OMC.DAL.Library\bin\Debug\OMC.DAL.Library.pdb
+D:\MyRepo\OMCApi\OMC.DAL.Library\bin\Debug\OMC.DAL.Interface.dll
+D:\MyRepo\OMCApi\OMC.DAL.Library\bin\Debug\OMC.Models.dll
+D:\MyRepo\OMCApi\OMC.DAL.Library\bin\Debug\OMC.DAL.Interface.pdb
+D:\MyRepo\OMCApi\OMC.DAL.Library\bin\Debug\OMC.Models.pdb
+D:\MyRepo\OMCApi\OMC.DAL.Library\obj\Debug\OMC.DAL.Library.csprojResolveAssemblyReference.cache
+D:\MyRepo\OMCApi\OMC.DAL.Library\obj\Debug\OMC.DAL.Library.csproj.CoreCompileInputs.cache
+D:\MyRepo\OMCApi\OMC.DAL.Library\obj\Debug\OMC.DAL.Library.dll
+D:\MyRepo\OMCApi\OMC.DAL.Library\obj\Debug\OMC.DAL.Library.pdb

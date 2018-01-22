@@ -1,0 +1,12 @@
+C:\Users\Somaiya\source\repos\OMCApi\OMC.DAL.Interface\bin\Debug\OMC.DAL.Interface.dll
+C:\Users\Somaiya\source\repos\OMCApi\OMC.DAL.Interface\bin\Debug\OMC.DAL.Interface.pdb
+C:\Users\Somaiya\source\repos\OMCApi\OMC.DAL.Interface\obj\Debug\OMC.DAL.Interface.csproj.CoreCompileInputs.cache
+C:\Users\Somaiya\source\repos\OMCApi\OMC.DAL.Interface\obj\Debug\OMC.DAL.Interface.dll
+C:\Users\Somaiya\source\repos\OMCApi\OMC.DAL.Interface\obj\Debug\OMC.DAL.Interface.pdb
+D:\MyRepo\OMCApi\OMC.DAL.Interface\bin\Debug\OMC.DAL.Interface.dll
+D:\MyRepo\OMCApi\OMC.DAL.Interface\bin\Debug\OMC.DAL.Interface.pdb
+D:\MyRepo\OMCApi\OMC.DAL.Interface\bin\Debug\OMC.Models.dll
+D:\MyRepo\OMCApi\OMC.DAL.Interface\bin\Debug\OMC.Models.pdb
+D:\MyRepo\OMCApi\OMC.DAL.Interface\obj\Debug\OMC.DAL.Interface.csproj.CoreCompileInputs.cache
+D:\MyRepo\OMCApi\OMC.DAL.Interface\obj\Debug\OMC.DAL.Interface.dll
+D:\MyRepo\OMCApi\OMC.DAL.Interface\obj\Debug\OMC.DAL.Interface.pdb
