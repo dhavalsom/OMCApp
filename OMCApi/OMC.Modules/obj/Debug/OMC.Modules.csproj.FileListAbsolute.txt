@@ -25,3 +25,22 @@ D:\MyRepo\OMCApi\OMC.Modules\bin\Debug\OMC.DAL.Library.dll.config
 D:\MyRepo\OMCApi\OMC.Modules\bin\Debug\OMC.Models.pdb
 D:\MyRepo\OMCApi\OMC.Modules\obj\Debug\OMC.Modules.dll
 D:\MyRepo\OMCApi\OMC.Modules\obj\Debug\OMC.Modules.pdb
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Modules\bin\Debug\OMC.Modules.dll
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Modules\bin\Debug\OMC.Modules.pdb
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Modules\bin\Debug\Ninject.dll
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Modules\bin\Debug\OMC.BL.Interface.dll
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Modules\bin\Debug\OMC.BL.Library.dll
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Modules\bin\Debug\OMC.DAL.Interface.dll
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Modules\bin\Debug\OMC.DAL.Library.dll
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Modules\bin\Debug\OMC.Models.dll
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Modules\bin\Debug\Ninject.xml
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Modules\bin\Debug\OMC.BL.Interface.pdb
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Modules\bin\Debug\OMC.BL.Library.pdb
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Modules\bin\Debug\OMC.DAL.Interface.pdb
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Modules\bin\Debug\OMC.DAL.Library.pdb
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Modules\bin\Debug\OMC.DAL.Library.dll.config
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Modules\bin\Debug\OMC.Models.pdb
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Modules\obj\Debug\OMC.Modules.csprojResolveAssemblyReference.cache
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Modules\obj\Debug\OMC.Modules.csproj.CoreCompileInputs.cache
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Modules\obj\Debug\OMC.Modules.dll
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Modules\obj\Debug\OMC.Modules.pdb
