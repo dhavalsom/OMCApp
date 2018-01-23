@@ -25,7 +25,7 @@ namespace OMC.DAL.Library
         {
             try
             {
-                SqlConnection con = new SqlConnection( WebConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString);
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString);
                 SqlCommand com = new SqlCommand("select * from [dbo].[UserDetail] where firstname = '" + user.Username + "' and password = '" + user.Password + "'", con);
                 com.CommandType = CommandType.Text;
                 SqlDataAdapter da = new SqlDataAdapter(com);

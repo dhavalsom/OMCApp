@@ -12,3 +12,11 @@ D:\MyRepo\OMCApi\OMC.BL.Interface\obj\Debug\OMC.BL.Interface.csprojResolveAssemb
 D:\MyRepo\OMCApi\OMC.BL.Interface\obj\Debug\OMC.BL.Interface.csproj.CoreCompileInputs.cache
 D:\MyRepo\OMCApi\OMC.BL.Interface\obj\Debug\OMC.BL.Interface.dll
 D:\MyRepo\OMCApi\OMC.BL.Interface\obj\Debug\OMC.BL.Interface.pdb
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.BL.Interface\bin\Debug\OMC.BL.Interface.dll
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.BL.Interface\bin\Debug\OMC.BL.Interface.pdb
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.BL.Interface\bin\Debug\OMC.Models.dll
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.BL.Interface\bin\Debug\OMC.Models.pdb
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.BL.Interface\obj\Debug\OMC.BL.Interface.csprojResolveAssemblyReference.cache
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.BL.Interface\obj\Debug\OMC.BL.Interface.csproj.CoreCompileInputs.cache
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.BL.Interface\obj\Debug\OMC.BL.Interface.dll
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.BL.Interface\obj\Debug\OMC.BL.Interface.pdb

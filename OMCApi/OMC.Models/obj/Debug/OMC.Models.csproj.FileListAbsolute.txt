@@ -8,3 +8,8 @@ D:\MyRepo\OMCApi\OMC.Models\bin\Debug\OMC.Models.pdb
 D:\MyRepo\OMCApi\OMC.Models\obj\Debug\OMC.Models.csproj.CoreCompileInputs.cache
 D:\MyRepo\OMCApi\OMC.Models\obj\Debug\OMC.Models.dll
 D:\MyRepo\OMCApi\OMC.Models\obj\Debug\OMC.Models.pdb
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Models\bin\Debug\OMC.Models.dll
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Models\bin\Debug\OMC.Models.pdb
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Models\obj\Debug\OMC.Models.csproj.CoreCompileInputs.cache
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Models\obj\Debug\OMC.Models.dll
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Models\obj\Debug\OMC.Models.pdb
