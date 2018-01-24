@@ -1,0 +1,26 @@
+﻿@model  OMC.Models.UserLogin
+
+
+
+<h2>Index</h2>
+@using (Html.BeginForm("Signin", "Login"))
+{
+
+    @Html.AntiForgeryToken()
+
+    @*@Html.TextBox("username")
+
+        @Html.TextBox("password")
+        <br />*@
+
+    @Html.LabelFor(m => m.Username)
+    @Html.TextBoxFor(m => m.Username)
+    <br />
+    @Html.LabelFor(m => m.Password)
+    @Html.TextBoxFor(m => m.Password)
+    <br />
+    <button type="submit">Signin</button>
+}
+
+
+
