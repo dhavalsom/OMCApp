@@ -53,8 +53,7 @@ namespace OMCApi.Areas.Login.Controllers
 
             using (var client = new HttpClient())
             {
-                //var SignInResult = SignInObj.InitiateSignInProcess(user);
-
+                
                 //Passing service base url  
                 client.BaseAddress = new Uri(ConfigurationManager.AppSettings["BaseUrl"]);
 
@@ -62,11 +61,10 @@ namespace OMCApi.Areas.Login.Controllers
                 //Define request data format  
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                //Sending request to find web api REST service resource GetAllEmployees using HttpClient  
-                //HttpResponseMessage Res = await client.GetAsync("/api/LoginAPI/");
                 var json = JsonConvert.SerializeObject(user);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
                 HttpResponseMessage Res = await client.PostAsync("api/LoginAPI/PostUserLogin", content);
+                
                 //Checking the response is successful or not which is sent using HttpClient  
                 if (Res.IsSuccessStatusCode)
                 {
@@ -75,11 +73,16 @@ namespace OMCApi.Areas.Login.Controllers
 
                     //Deserializing the response recieved from web api and storing into the Employee list  
                     //UserInfo = JsonConvert.DeserializeObject<List<User>>(SignInResponse);
-
+                    if (Convert.ToBoolean(SignInResponse))
+                        return View();
+                    else
+                        return View("LoginFailure");
                 }
+                else
+                    return View("LoginFailure");
 
             }
-            return View();
+            
         }
         // GET: Login/Login/Details/5
         public ActionResult Details(int id)

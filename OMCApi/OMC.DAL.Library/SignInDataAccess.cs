@@ -25,15 +25,25 @@ namespace OMC.DAL.Library
         {
             try
             {
-                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString);
+
                 //SqlConnection con = new SqlConnection("Data Source=localhost;Initial Catalog=HealthCare;Integrated Security=True;");
-                SqlCommand com = new SqlCommand("select * from [dbo].[UserDetail] where firstname = '" + user.Username + "' and password = '" + user.Password + "'", con);
-                com.CommandType = CommandType.Text;
+                //SqlCommand com = new SqlCommand("select * from [dbo].[UserDetail] where firstname = '" + user.Username + "' and password = '" + user.Password + "'", con);
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString);
+
+                SqlCommand com = new SqlCommand("[SP_GET_LOGIN_DETAILS]",con);
+                com.CommandType = CommandType.StoredProcedure;
+
                 SqlDataAdapter da = new SqlDataAdapter(com);
-                DataTable dt = new DataTable();
-                DataSet ds = new DataSet();
+                da.SelectCommand.Parameters.Add(new SqlParameter("@USERNAME", SqlDbType.NVarChar, 100));
+                da.SelectCommand.Parameters["@USERNAME"].Value = user.Username;
+                da.SelectCommand.Parameters.Add(new SqlParameter("@PASSWORD", SqlDbType.NVarChar, 100));
+                da.SelectCommand.Parameters["@PASSWORD"].Value = user.Password;
+              
                 con.Open();
+
+                DataSet ds = new DataSet();
                 da.Fill(ds);
+
                 int count = ds.Tables[0].Rows.Count;
                 con.Close();
 

@@ -32,10 +32,10 @@ namespace OMCApi.Areas.Login.Controllers
 
 
         // GET: api/LoginAPI
-        //public IEnumerable<string> Get()
-        //{
-        //    return new string[] { "value1", "value2" };
-        //}
+        public IEnumerable<string> Get()
+        {
+            return new string[] { "value1", "value2" };
+        }
 
         // GET: api/LoginAPI/5
         //public string Get(int id)

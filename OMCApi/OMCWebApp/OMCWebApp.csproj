@@ -53,14 +53,25 @@
     <Reference Include="Ninject">
       <HintPath>..\..\..\..\OMCApi\OMC.Modules\bin\Debug\Ninject.dll</HintPath>
     </Reference>
-    <Reference Include="OMC.BL.Interface">
-      <HintPath>..\..\..\..\OMCApi\OMC.BL.Interface\bin\Debug\OMC.BL.Interface.dll</HintPath>
+    <Reference Include="OMC.BL.Interface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OMC.BL.Interface\bin\Debug\OMC.BL.Interface.dll</HintPath>
     </Reference>
-    <Reference Include="OMC.Models">
-      <HintPath>..\..\..\..\OMCApi\OMC.Models\bin\Debug\OMC.Models.dll</HintPath>
+    <Reference Include="OMC.BL.Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OMC.BL.Library\bin\Debug\OMC.BL.Library.dll</HintPath>
     </Reference>
-    <Reference Include="OMC.Modules">
-      <HintPath>..\..\..\..\OMCApi\OMC.Modules\bin\Debug\OMC.Modules.dll</HintPath>
+    <Reference Include="OMC.DAL.Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OMC.DAL.Library\bin\Debug\OMC.DAL.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="OMC.Models, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OMC.Models\bin\Debug\OMC.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="OMC.Modules, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OMC.Modules\bin\Debug\OMC.Modules.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -156,6 +167,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\SignUpController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -200,6 +212,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Login\Signin.cshtml" />
+    <Content Include="Views\Login\LoginFailure.cshtml" />
+    <Content Include="Views\SignUp\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
