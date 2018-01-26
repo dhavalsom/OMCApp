@@ -38,7 +38,7 @@ namespace OMC.DAL.Library
 
                 SqlDataAdapter da = new SqlDataAdapter(com);
                 da.SelectCommand.Parameters.Add(new SqlParameter("@USER_DETAIL_XML", SqlDbType.Xml, 100));
-                da.SelectCommand.Parameters["@USER_DETAIL_XML"].Value = GetXMLFromObject(signupdetails);
+                da.SelectCommand.Parameters["@USER_DETAIL_XML"].Value = signupdetails.Serialize();
                 da.SelectCommand.Parameters.Add(new SqlParameter("@OPERATION", SqlDbType.NVarChar, 100));
                 da.SelectCommand.Parameters["@OPERATION"].Value = DBNull.Value;
                 da.SelectCommand.Parameters.Add(new SqlParameter("@USER_ID", SqlDbType.BigInt, 100));

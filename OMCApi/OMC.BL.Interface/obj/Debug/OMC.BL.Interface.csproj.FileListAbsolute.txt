@@ -12,10 +12,10 @@ D:\MyRepo\OMCApi\OMC.BL.Interface\obj\Debug\OMC.BL.Interface.csprojResolveAssemb
 D:\MyRepo\OMCApi\OMC.BL.Interface\obj\Debug\OMC.BL.Interface.csproj.CoreCompileInputs.cache
 D:\MyRepo\OMCApi\OMC.BL.Interface\obj\Debug\OMC.BL.Interface.dll
 D:\MyRepo\OMCApi\OMC.BL.Interface\obj\Debug\OMC.BL.Interface.pdb
+D:\MyRepo\OMCApi\OMCApi\OMC.BL.Interface\obj\Debug\OMC.BL.Interface.csproj.CoreCompileInputs.cache
 D:\MyRepo\OMCApi\OMCApi\OMC.BL.Interface\bin\Debug\OMC.BL.Interface.dll
 D:\MyRepo\OMCApi\OMCApi\OMC.BL.Interface\bin\Debug\OMC.BL.Interface.pdb
+D:\MyRepo\OMCApi\OMCApi\OMC.BL.Interface\bin\Debug\OMC.Models.dll
 D:\MyRepo\OMCApi\OMCApi\OMC.BL.Interface\bin\Debug\OMC.Models.pdb
-D:\MyRepo\OMCApi\OMCApi\OMC.BL.Interface\obj\Debug\OMC.BL.Interface.csproj.CoreCompileInputs.cache
 D:\MyRepo\OMCApi\OMCApi\OMC.BL.Interface\obj\Debug\OMC.BL.Interface.dll
 D:\MyRepo\OMCApi\OMCApi\OMC.BL.Interface\obj\Debug\OMC.BL.Interface.pdb
-D:\MyRepo\OMCApi\OMCApi\OMC.BL.Interface\bin\Debug\OMC.Models.dll

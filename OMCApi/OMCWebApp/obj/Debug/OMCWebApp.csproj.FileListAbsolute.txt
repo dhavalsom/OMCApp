@@ -55,6 +55,8 @@ D:\MyRepo\OMC\OMCApp\OMCApi\OMCWebApp\bin\OMC.DAL.Library.pdb
 D:\MyRepo\OMC\OMCApp\OMCApi\OMCWebApp\bin\OMC.DAL.Library.dll.config
 D:\MyRepo\OMC\OMCApp\OMCApi\OMCWebApp\obj\Debug\OMCWebApp.dll
 D:\MyRepo\OMC\OMCApp\OMCApi\OMCWebApp\obj\Debug\OMCWebApp.pdb
+D:\MyRepo\OMCApi\OMCApi\OMCWebApp\obj\Debug\OMCWebApp.csprojResolveAssemblyReference.cache
+D:\MyRepo\OMCApi\OMCApi\OMCWebApp\obj\Debug\OMCWebApp.csproj.CoreCompileInputs.cache
 D:\MyRepo\OMCApi\OMCApi\OMCWebApp\bin\ApplicationInsights.config
 D:\MyRepo\OMCApi\OMCApi\OMCWebApp\bin\OMCWebApp.dll.config
 D:\MyRepo\OMCApi\OMCApi\OMCWebApp\bin\OMCWebApp.dll
@@ -70,6 +72,7 @@ D:\MyRepo\OMCApi\OMCApi\OMCWebApp\bin\Microsoft.ApplicationInsights.dll
 D:\MyRepo\OMCApi\OMCApi\OMCWebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\MyRepo\OMCApi\OMCApi\OMCWebApp\bin\Microsoft.Web.Infrastructure.dll
 D:\MyRepo\OMCApi\OMCApi\OMCWebApp\bin\Newtonsoft.Json.dll
+D:\MyRepo\OMCApi\OMCApi\OMCWebApp\bin\OMC.BL.Interface.dll
 D:\MyRepo\OMCApi\OMCApi\OMCWebApp\bin\OMC.BL.Library.dll
 D:\MyRepo\OMCApi\OMCApi\OMCWebApp\bin\OMC.DAL.Library.dll
 D:\MyRepo\OMCApi\OMCApi\OMCWebApp\bin\OMC.Models.dll
@@ -84,6 +87,7 @@ D:\MyRepo\OMCApi\OMCApi\OMCWebApp\bin\System.Web.WebPages.Razor.dll
 D:\MyRepo\OMCApi\OMCApi\OMCWebApp\bin\WebGrease.dll
 D:\MyRepo\OMCApi\OMCApi\OMCWebApp\bin\OMC.DAL.Interface.dll
 D:\MyRepo\OMCApi\OMCApi\OMCWebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\MyRepo\OMCApi\OMCApi\OMCWebApp\bin\OMC.BL.Interface.pdb
 D:\MyRepo\OMCApi\OMCApi\OMCWebApp\bin\OMC.BL.Library.pdb
 D:\MyRepo\OMCApi\OMCApi\OMCWebApp\bin\OMC.DAL.Library.pdb
 D:\MyRepo\OMCApi\OMCApi\OMCWebApp\bin\OMC.Models.pdb
@@ -103,9 +107,5 @@ D:\MyRepo\OMCApi\OMCApi\OMCWebApp\bin\Microsoft.AI.ServerTelemetryChannel.xml
 D:\MyRepo\OMCApi\OMCApi\OMCWebApp\bin\Microsoft.AI.WindowsServer.xml
 D:\MyRepo\OMCApi\OMCApi\OMCWebApp\bin\Microsoft.AI.Web.xml
 D:\MyRepo\OMCApi\OMCApi\OMCWebApp\bin\OMC.DAL.Interface.pdb
-D:\MyRepo\OMCApi\OMCApi\OMCWebApp\obj\Debug\OMCWebApp.csprojResolveAssemblyReference.cache
-D:\MyRepo\OMCApi\OMCApi\OMCWebApp\obj\Debug\OMCWebApp.csproj.CoreCompileInputs.cache
 D:\MyRepo\OMCApi\OMCApi\OMCWebApp\obj\Debug\OMCWebApp.dll
 D:\MyRepo\OMCApi\OMCApi\OMCWebApp\obj\Debug\OMCWebApp.pdb
-D:\MyRepo\OMCApi\OMCApi\OMCWebApp\bin\OMC.BL.Interface.dll
-D:\MyRepo\OMCApi\OMCApi\OMCWebApp\bin\OMC.BL.Interface.pdb

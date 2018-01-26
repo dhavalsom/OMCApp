@@ -15,6 +15,7 @@ D:\MyRepo\OMCApi\OMC.BL.Library\bin\Debug\OMC.DAL.Interface.pdb
 D:\MyRepo\OMCApi\OMC.BL.Library\bin\Debug\OMC.Models.pdb
 D:\MyRepo\OMCApi\OMC.BL.Library\obj\Debug\OMC.BL.Library.dll
 D:\MyRepo\OMCApi\OMC.BL.Library\obj\Debug\OMC.BL.Library.pdb
+D:\MyRepo\OMCApi\OMCApi\OMC.BL.Library\obj\Debug\OMC.BL.Library.csproj.CoreCompileInputs.cache
 D:\MyRepo\OMCApi\OMCApi\OMC.BL.Library\bin\Debug\OMC.BL.Library.dll
 D:\MyRepo\OMCApi\OMCApi\OMC.BL.Library\bin\Debug\OMC.BL.Library.pdb
 D:\MyRepo\OMCApi\OMCApi\OMC.BL.Library\bin\Debug\OMC.BL.Interface.dll
@@ -24,6 +25,5 @@ D:\MyRepo\OMCApi\OMCApi\OMC.BL.Library\bin\Debug\OMC.BL.Interface.pdb
 D:\MyRepo\OMCApi\OMCApi\OMC.BL.Library\bin\Debug\OMC.DAL.Interface.pdb
 D:\MyRepo\OMCApi\OMCApi\OMC.BL.Library\bin\Debug\OMC.Models.pdb
 D:\MyRepo\OMCApi\OMCApi\OMC.BL.Library\obj\Debug\OMC.BL.Library.csprojResolveAssemblyReference.cache
-D:\MyRepo\OMCApi\OMCApi\OMC.BL.Library\obj\Debug\OMC.BL.Library.csproj.CoreCompileInputs.cache
 D:\MyRepo\OMCApi\OMCApi\OMC.BL.Library\obj\Debug\OMC.BL.Library.dll
 D:\MyRepo\OMCApi\OMCApi\OMC.BL.Library\obj\Debug\OMC.BL.Library.pdb

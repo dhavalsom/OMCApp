@@ -185,6 +185,8 @@ D:\MyRepo\OMC\OMCApp\OMCApi\OMCApi\obj\Debug\OMCApi.csprojResolveAssemblyReferen
 D:\MyRepo\OMC\OMCApp\OMCApi\OMCApi\obj\Debug\OMCApi.csproj.CoreCompileInputs.cache
 D:\MyRepo\OMC\OMCApp\OMCApi\OMCApi\obj\Debug\OMCApi.dll
 D:\MyRepo\OMC\OMCApp\OMCApi\OMCApi\obj\Debug\OMCApi.pdb
+D:\MyRepo\OMCApi\OMCApi\OMCApi\obj\Debug\OMCApi.csprojResolveAssemblyReference.cache
+D:\MyRepo\OMCApi\OMCApi\OMCApi\obj\Debug\OMCApi.csproj.CoreCompileInputs.cache
 D:\MyRepo\OMCApi\OMCApi\OMCApi\bin\ApplicationInsights.config
 D:\MyRepo\OMCApi\OMCApi\OMCApi\bin\OMCApi.dll.config
 D:\MyRepo\OMCApi\OMCApi\OMCApi\bin\OMCApi.dll
@@ -250,7 +252,5 @@ D:\MyRepo\OMCApi\OMCApi\OMCApi\bin\Microsoft.AI.DependencyCollector.xml
 D:\MyRepo\OMCApi\OMCApi\OMCApi\bin\Microsoft.AI.ServerTelemetryChannel.xml
 D:\MyRepo\OMCApi\OMCApi\OMCApi\bin\Microsoft.AI.WindowsServer.xml
 D:\MyRepo\OMCApi\OMCApi\OMCApi\bin\Microsoft.AI.Web.xml
-D:\MyRepo\OMCApi\OMCApi\OMCApi\obj\Debug\OMCApi.csproj.CoreCompileInputs.cache
 D:\MyRepo\OMCApi\OMCApi\OMCApi\obj\Debug\OMCApi.dll
 D:\MyRepo\OMCApi\OMCApi\OMCApi\obj\Debug\OMCApi.pdb
-D:\MyRepo\OMCApi\OMCApi\OMCApi\obj\Debug\OMCApi.csprojResolveAssemblyReference.cache

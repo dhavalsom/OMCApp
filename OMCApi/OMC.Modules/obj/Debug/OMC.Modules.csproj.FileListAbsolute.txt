@@ -43,6 +43,7 @@ D:\MyRepo\OMC\OMCApp\OMCApi\OMC.Modules\obj\Debug\OMC.Modules.csprojResolveAssem
 D:\MyRepo\OMC\OMCApp\OMCApi\OMC.Modules\obj\Debug\OMC.Modules.csproj.CoreCompileInputs.cache
 D:\MyRepo\OMC\OMCApp\OMCApi\OMC.Modules\obj\Debug\OMC.Modules.dll
 D:\MyRepo\OMC\OMCApp\OMCApi\OMC.Modules\obj\Debug\OMC.Modules.pdb
+D:\MyRepo\OMCApi\OMCApi\OMC.Modules\obj\Debug\OMC.Modules.csproj.CoreCompileInputs.cache
 D:\MyRepo\OMCApi\OMCApi\OMC.Modules\bin\Debug\OMC.Modules.dll
 D:\MyRepo\OMCApi\OMCApi\OMC.Modules\bin\Debug\OMC.Modules.pdb
 D:\MyRepo\OMCApi\OMCApi\OMC.Modules\bin\Debug\Ninject.dll
@@ -58,6 +59,5 @@ D:\MyRepo\OMCApi\OMCApi\OMC.Modules\bin\Debug\OMC.DAL.Interface.pdb
 D:\MyRepo\OMCApi\OMCApi\OMC.Modules\bin\Debug\OMC.DAL.Library.pdb
 D:\MyRepo\OMCApi\OMCApi\OMC.Modules\bin\Debug\OMC.Models.pdb
 D:\MyRepo\OMCApi\OMCApi\OMC.Modules\obj\Debug\OMC.Modules.csprojResolveAssemblyReference.cache
-D:\MyRepo\OMCApi\OMCApi\OMC.Modules\obj\Debug\OMC.Modules.csproj.CoreCompileInputs.cache
 D:\MyRepo\OMCApi\OMCApi\OMC.Modules\obj\Debug\OMC.Modules.dll
 D:\MyRepo\OMCApi\OMCApi\OMC.Modules\obj\Debug\OMC.Modules.pdb

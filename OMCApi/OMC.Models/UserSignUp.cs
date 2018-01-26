@@ -8,8 +8,8 @@ using System.Xml.Serialization;
 
 namespace OMC.Models
 {
-    [Serializable]
-    public class UserSignUp:BaseEntity
+    //[Serializable]
+    public class UserSignUp
     {
         #region Properties
         public string FirstName { get; set; }
@@ -20,12 +20,12 @@ namespace OMC.Models
         public string Gender { get; set; }
         public string DOB { get; set; }
         public string Password { get; set; }
-        public string AlternateNo { get; set; }
-        public string EmergencyContactNo { get; set; }
-        public string EmergencyContactPerson { get; set; }
-        public string DLNumber { get; set; }
-        public string SSN { get; set; }
-        public string UserType { get; set; }
+        //public string AlternateNo { get; set; }
+        //public string EmergencyContactNo { get; set; }
+        //public string EmergencyContactPerson { get; set; }
+        //public string DLNumber { get; set; }
+        //public string SSN { get; set; }
+        //public string UserType { get; set; }
         #endregion
 
         #region Serialization
