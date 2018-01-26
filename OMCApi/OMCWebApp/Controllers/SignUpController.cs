@@ -47,6 +47,8 @@ namespace OMCWebApp.Controllers
         {
             var SignUpObj = _Kernel.Get<ISignUp>();
 
+            userdetails.UserType = 1;
+            userdetails.Active = 1;
             using (var client = new HttpClient())
             {
 

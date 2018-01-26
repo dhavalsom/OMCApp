@@ -20,12 +20,13 @@ namespace OMC.Models
         public string Gender { get; set; }
         public string DOB { get; set; }
         public string Password { get; set; }
-        //public string AlternateNo { get; set; }
-        //public string EmergencyContactNo { get; set; }
-        //public string EmergencyContactPerson { get; set; }
-        //public string DLNumber { get; set; }
-        //public string SSN { get; set; }
-        //public string UserType { get; set; }
+        public string AlternateNo { get; set; }
+        public string EmergencyContactNo { get; set; }
+        public string EmergencyContactPerson { get; set; }
+        public string DLNumber { get; set; }
+        public string SSN { get; set; }
+        public int UserType { get; set; }
+        public int Active { get; set; }
         #endregion
 
         #region Serialization

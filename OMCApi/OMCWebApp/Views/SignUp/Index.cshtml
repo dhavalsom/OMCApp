@@ -39,6 +39,13 @@ Patient SignUp
             <td> @Html.TextBoxFor(m => m.PhoneNumber)</td>
         </tr>
     </table>
+    @Html.HiddenFor(m => m.AlternateNo)
+    @Html.HiddenFor(m => m.EmergencyContactNo)
+    @Html.HiddenFor(m => m.EmergencyContactPerson)
+    @Html.HiddenFor(m => m.DLNumber)
+    @Html.HiddenFor(m => m.SSN)
+    @Html.HiddenFor(m => m.UserType)
+    @Html.HiddenFor(m=>m.Active)
     <br />
     <button type="submit">Save</button>
 }

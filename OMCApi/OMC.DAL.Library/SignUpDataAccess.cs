@@ -38,15 +38,17 @@ namespace OMC.DAL.Library
 
                 SqlDataAdapter da = new SqlDataAdapter(com);
                 da.SelectCommand.Parameters.Add(new SqlParameter("@USER_DETAIL_XML", SqlDbType.Xml, 100));
-                da.SelectCommand.Parameters["@USER_DETAIL_XML"].Value = signupdetails.Serialize();
+                da.SelectCommand.Parameters["@USER_DETAIL_XML"].Value = GetXMLFromObject(signupdetails);
                 da.SelectCommand.Parameters.Add(new SqlParameter("@OPERATION", SqlDbType.NVarChar, 100));
                 da.SelectCommand.Parameters["@OPERATION"].Value = DBNull.Value;
                 da.SelectCommand.Parameters.Add(new SqlParameter("@USER_ID", SqlDbType.BigInt, 100));
-                da.SelectCommand.Parameters["@USER_ID"].Value = DBNull.Value;
+                da.SelectCommand.Parameters["@USER_ID"].Value = 1;
                 con.Open();
 
+                int result = (int)com.ExecuteScalar();
+
                 DataSet ds = new DataSet();
-                da.Fill(ds);
+                //da.Fill(ds);
 
                 int count = ds.Tables[0].Rows.Count;
                 con.Close();
@@ -70,27 +72,48 @@ namespace OMC.DAL.Library
 
         public static string GetXMLFromObject(object o)
         {
-            StringWriter sw = new StringWriter();
-            XmlTextWriter tw = null;
+            // removes version
+            XmlWriterSettings settings = new XmlWriterSettings();
+            settings.OmitXmlDeclaration = true;
+
+            XmlSerializer xsSubmit = new XmlSerializer(o.GetType());
+            //StringWriter sw = new StringWriter();
             try
             {
-                XmlSerializer serializer = new XmlSerializer(o.GetType());
-                tw = new XmlTextWriter(sw);
-                serializer.Serialize(tw, o);
+                using (StringWriter sw = new StringWriter())
+                using (XmlWriter writer = XmlWriter.Create(sw, settings))
+                {
+                    // removes namespace
+                    var xmlns = new XmlSerializerNamespaces();
+                    xmlns.Add(string.Empty, string.Empty);
+
+                    xsSubmit.Serialize(writer, o, xmlns);
+                    return sw.ToString(); // Your XML
+                }
             }
+
+            //StringWriter sw = new StringWriter();
+            //XmlTextWriter tw = null;
+            //try
+            //{
+            //    XmlSerializer serializer = new XmlSerializer(o.GetType());
+            //    tw = new XmlTextWriter(sw);
+            //    serializer.Serialize(tw, o);
+            //}
             catch (Exception ex)
             {
                 //Handle Exception Code
+                return null;
             }
             finally
             {
-                sw.Close();
-                if (tw != null)
-                {
-                    tw.Close();
-                }
+                //sw.Close();
+                //if (tw != null)
+                //{
+                //    tw.Close();
+                //}
             }
-            return sw.ToString();
+            //return sw.ToString();
         }
 
 

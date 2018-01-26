@@ -19,3 +19,4 @@ D:\MyRepo\OMCApi\OMCApi\OMC.BL.Interface\bin\Debug\OMC.Models.dll
 D:\MyRepo\OMCApi\OMCApi\OMC.BL.Interface\bin\Debug\OMC.Models.pdb
 D:\MyRepo\OMCApi\OMCApi\OMC.BL.Interface\obj\Debug\OMC.BL.Interface.dll
 D:\MyRepo\OMCApi\OMCApi\OMC.BL.Interface\obj\Debug\OMC.BL.Interface.pdb
+D:\MyRepo\OMCApi\OMCApi\OMC.BL.Interface\obj\Debug\OMC.BL.Interface.csprojResolveAssemblyReference.cache
