@@ -33,9 +33,6 @@
     <Reference Include="OMC.DAL.Interface">
       <HintPath>..\OMC.DAL.Interface\bin\Debug\OMC.DAL.Interface.dll</HintPath>
     </Reference>
-    <Reference Include="OMC.Models">
-      <HintPath>..\OMC.DAL.Interface\bin\Debug\OMC.Models.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -48,9 +45,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccessBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignInDataAccess.cs" />
     <Compile Include="SignUpDataAccess.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OMC.Models\OMC.Models.csproj">
+      <Project>{a685aa6b-9dc5-400e-bb08-042bf56c1db6}</Project>
+      <Name>OMC.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
