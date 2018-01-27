@@ -15,12 +15,11 @@ using System.Xml;
 
 namespace OMC.DAL.Library
 {
-    public class SignUpDataAccess:ISignUpDataAccess
+    public class SignUpDataAccess : DataAccessBase, ISignUpDataAccess
     {
         #region Declaration
         // ISignInDataAccess _signObj;
         #endregion
-
 
         #region Methods
 
@@ -28,30 +27,24 @@ namespace OMC.DAL.Library
         {
             try
             {
+                Command.CommandText = "SP_USER_DETAIL_MANAGER";
+                Command.CommandType = CommandType.StoredProcedure;
 
-                //SqlConnection con = new SqlConnection("Data Source=localhost;Initial Catalog=HealthCare;Integrated Security=True;");
-                //SqlCommand com = new SqlCommand("select * from [dbo].[UserDetail] where firstname = '" + user.Username + "' and password = '" + user.Password + "'", con);
-                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString);
-
-                SqlCommand com = new SqlCommand("[SP_USER_DETAIL_MANAGER]", con);
-                com.CommandType = CommandType.StoredProcedure;
-
-                SqlDataAdapter da = new SqlDataAdapter(com);
-                da.SelectCommand.Parameters.Add(new SqlParameter("@USER_DETAIL_XML", SqlDbType.Xml, 100));
+                SqlDataAdapter da = new SqlDataAdapter(Command);
+                da.SelectCommand.Parameters.Add(new SqlParameter("@USER_DETAIL_XML", SqlDbType.NVarChar, 10000));
                 da.SelectCommand.Parameters["@USER_DETAIL_XML"].Value = GetXMLFromObject(signupdetails);
                 da.SelectCommand.Parameters.Add(new SqlParameter("@OPERATION", SqlDbType.NVarChar, 100));
                 da.SelectCommand.Parameters["@OPERATION"].Value = DBNull.Value;
                 da.SelectCommand.Parameters.Add(new SqlParameter("@USER_ID", SqlDbType.BigInt, 100));
                 da.SelectCommand.Parameters["@USER_ID"].Value = 1;
-                con.Open();
+                Connection.Open();
 
-                int result = (int)com.ExecuteScalar();
+                int result = (int)Command.ExecuteScalar();
 
                 DataSet ds = new DataSet();
                 //da.Fill(ds);
 
                 int count = ds.Tables[0].Rows.Count;
-                con.Close();
 
                 if (count == 1)
                     return ds;
@@ -60,8 +53,11 @@ namespace OMC.DAL.Library
             }
             catch (Exception ex)
             {
-                //log
                 return null;
+            }
+            finally
+            {
+                Connection.Close();
             }
 
         }
