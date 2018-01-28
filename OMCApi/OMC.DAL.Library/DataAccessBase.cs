@@ -16,8 +16,8 @@ namespace OMC.DAL.Library
         #region Constructors 
         public DataAccessBase()
         {
-            Connection = new SqlConnection(@"Data Source=DESKTOP-CVEJBH3\MS2014;Initial Catalog=HealthCare;Integrated Security=True;");
-            //Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString);
+            //Connection = new SqlConnection(@"Data Source=localhost;Initial Catalog=HealthCare;Integrated Security=True;");
+            Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString);
             Command = new SqlCommand();
             Command.Connection = Connection;
         }

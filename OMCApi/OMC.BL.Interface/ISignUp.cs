@@ -10,6 +10,11 @@ namespace OMC.BL.Interface
 {
     public interface ISignUp : IDisposable
     {
-        DataSet InitiateSignUpProcess(UserSignUp signupdetails);
+
+        ErrorLog ValidateSignUpDetails(UserSignUp signupdetails);
+
+        bool InitiateSignUpProcess(UserSignUp signupdetails);
+
+
     }
 }

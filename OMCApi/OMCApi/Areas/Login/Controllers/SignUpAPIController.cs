@@ -41,11 +41,19 @@ namespace OMCApi.Areas.Login.Controllers
 
         [HttpPost]
         [Route("PostUserSignUp")]
-        public DataSet PostUserSignUp([FromBody]UserSignUp userdetails)
+        public bool PostUserSignUp([FromBody]UserSignUp userdetails)
         {
             var SignUpObj = _Kernel.Get<ISignUp>();
 
-            var SignUpResult = SignUpObj.InitiateSignUpProcess(userdetails);
+            var SignUpValidation = SignUpObj.ValidateSignUpDetails(userdetails);
+
+            var SignUpResult = false;
+
+            if (SignUpValidation.ExceptionType == "Validation Success")
+            {
+                SignUpResult = SignUpObj.InitiateSignUpProcess(userdetails);
+            }
+            
 
             return SignUpResult;
         }

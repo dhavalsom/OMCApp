@@ -10,6 +10,6 @@ namespace OMC.DAL.Interface
 {
     public interface ISignUpDataAccess
     {
-        DataSet InitiateSignUpProcess(UserSignUp signupdetails);
+        bool InitiateSignUpProcess(UserSignUp signupdetails);
     }
 }

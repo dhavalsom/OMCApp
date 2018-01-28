@@ -46,7 +46,7 @@ namespace OMCApi.Areas.Login.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Signin(UserLogin user)
         {
-            var SignInObj = _Kernel.Get<ISignIn>();
+            //var SignInObj = _Kernel.Get<ISignIn>();
 
             string username = user.Username;
             string password = user.Password;

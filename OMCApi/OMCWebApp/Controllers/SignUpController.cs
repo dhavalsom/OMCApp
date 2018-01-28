@@ -45,7 +45,7 @@ namespace OMCWebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> SaveSignUpDetails(UserSignUp userdetails)
         {
-            var SignUpObj = _Kernel.Get<ISignUp>();
+            //var SignUpObj = _Kernel.Get<ISignUp>();
 
             userdetails.UserType = 1;
             userdetails.Active = 1;
@@ -72,7 +72,7 @@ namespace OMCWebApp.Controllers
                     //Deserializing the response recieved from web api and storing into the Employee list  
                     //UserInfo = JsonConvert.DeserializeObject<List<User>>(SignInResponse);
                     if (Convert.ToBoolean(SignInResponse))
-                        return View();
+                        return View("Index");
                     else
                         return View("LoginFailure");
                 }

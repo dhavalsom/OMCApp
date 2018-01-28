@@ -18,12 +18,21 @@ namespace OMC.DAL.Library
     public class SignUpDataAccess : DataAccessBase, ISignUpDataAccess
     {
         #region Declaration
-        // ISignInDataAccess _signObj;
+        SqlConnection _connection;
+        SqlCommand _command;
+        #endregion
+
+        #region Constructor
+        public SignUpDataAccess()
+        {
+            this._connection = Connection;
+            this._command = Command;
+        }
         #endregion
 
         #region Methods
 
-        public DataSet InitiateSignUpProcess(UserSignUp signupdetails)
+        public bool InitiateSignUpProcess(UserSignUp signupdetails)
         {
             try
             {
@@ -39,21 +48,16 @@ namespace OMC.DAL.Library
                 da.SelectCommand.Parameters["@USER_ID"].Value = 1;
                 Connection.Open();
 
-                int result = (int)Command.ExecuteScalar();
+                int? result = (int?)Command.ExecuteScalar();
 
-                DataSet ds = new DataSet();
-                //da.Fill(ds);
-
-                int count = ds.Tables[0].Rows.Count;
-
-                if (count == 1)
-                    return ds;
+                if (result == null || result == 1)
+                    return true;
                 else
-                    return null;
+                    return false;
             }
             catch (Exception ex)
             {
-                return null;
+                return false;
             }
             finally
             {

@@ -22,17 +22,54 @@ namespace OMC.BL.Library
             this._signUpDA = SignUpDA;
         }
 
-        public DataSet InitiateSignUpProcess(UserSignUp signupdetails)
+        public bool InitiateSignUpProcess(UserSignUp signupdetails)
         {
             try
             {
-                DataSet isSignin = this._signUpDA.InitiateSignUpProcess(signupdetails);
+                bool isSignin = this._signUpDA.InitiateSignUpProcess(signupdetails);
                 return isSignin;
             }
             catch (Exception ex)
             {
                 //Log
-                return null;
+                return false;
+            }
+            finally
+            {
+                //Log
+            }
+        }
+
+        public ErrorLog ValidateSignUpDetails(UserSignUp signupdetails)
+        {
+            ErrorLog validationmsg = new ErrorLog();
+            try
+            {
+                //bool isDetailsValid = true;
+               
+
+                if (!string.IsNullOrEmpty(signupdetails.EmailAddress) && !string.IsNullOrEmpty(signupdetails.FirstName) && !string.IsNullOrEmpty(signupdetails.LastName) && !string.IsNullOrEmpty(signupdetails.DOB) && !string.IsNullOrEmpty(signupdetails.Gender) && !string.IsNullOrEmpty(signupdetails.Password) && !string.IsNullOrEmpty(signupdetails.PhoneNumber))
+                {
+                    validationmsg.ExceptionType = "Validation Success";
+                    validationmsg.Source = "ValidateSignUpDetails";
+                }
+                else
+                {
+                    validationmsg.ExceptionType = "Validation Failed";
+                    validationmsg.Message = "Mandatory fields missing";
+                    validationmsg.Source = "ValidateSignUpDetails";
+                }
+
+                return validationmsg;
+            }
+            catch (Exception ex)
+            {
+                //Log
+
+                validationmsg.ExceptionType = ex.GetType().ToString();
+                validationmsg.Message = ex.ToString();
+                validationmsg.Source = "ValidateSignUpDetails";
+                return validationmsg;
             }
             finally
             {
