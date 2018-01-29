@@ -202,6 +202,7 @@
     <Content Include="Views\Login\Signin.cshtml" />
     <Content Include="Views\Login\LoginFailure.cshtml" />
     <Content Include="Views\SignUp\Index.cshtml" />
+    <Content Include="Views\SignUp\SignUpFailure.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

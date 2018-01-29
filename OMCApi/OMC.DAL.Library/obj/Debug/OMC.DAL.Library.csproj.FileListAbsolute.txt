@@ -48,3 +48,6 @@ E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.DAL.Library\obj\Debug\OMC.DAL.Libr
 E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.DAL.Library\obj\Debug\OMC.DAL.Library.csproj.CoreCompileInputs.cache
 E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.DAL.Library\obj\Debug\OMC.DAL.Library.dll
 E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.DAL.Library\obj\Debug\OMC.DAL.Library.pdb
+D:\MyRepo\OMCApi\OMCApi\OMC.DAL.Library\bin\Debug\log4net.dll
+D:\MyRepo\OMCApi\OMCApi\OMC.DAL.Library\bin\Debug\Newtonsoft.Json.dll
+D:\MyRepo\OMCApi\OMCApi\OMC.DAL.Library\bin\Debug\log4net.xml
