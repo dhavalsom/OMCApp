@@ -33,12 +33,6 @@
     <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
     </Reference>
-    <Reference Include="OMC.BL.Interface">
-      <HintPath>..\OMC.BL.Interface\bin\Debug\OMC.BL.Interface.dll</HintPath>
-    </Reference>
-    <Reference Include="OMC.BL.Library">
-      <HintPath>..\OMC.BL.Library\bin\Debug\OMC.BL.Library.dll</HintPath>
-    </Reference>
     <Reference Include="OMC.DAL.Interface">
       <HintPath>..\OMC.DAL.Interface\bin\Debug\OMC.DAL.Interface.dll</HintPath>
     </Reference>
@@ -61,6 +55,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OMC.BL.Interface\OMC.BL.Interface.csproj">
+      <Project>{545c2273-3a99-49d8-89a2-41192368bafb}</Project>
+      <Name>OMC.BL.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OMC.BL.Library\OMC.BL.Library.csproj">
+      <Project>{050211e5-eb81-4212-b2c5-79d88e467285}</Project>
+      <Name>OMC.BL.Library</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

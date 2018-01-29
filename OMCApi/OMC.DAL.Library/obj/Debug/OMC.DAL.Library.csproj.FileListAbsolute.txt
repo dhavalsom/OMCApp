@@ -34,3 +34,17 @@ D:\MyRepo\OMCApi\OMCApi\OMC.DAL.Library\bin\Debug\OMC.DAL.Interface.pdb
 D:\MyRepo\OMCApi\OMCApi\OMC.DAL.Library\bin\Debug\OMC.Models.pdb
 D:\MyRepo\OMCApi\OMCApi\OMC.DAL.Library\obj\Debug\OMC.DAL.Library.dll
 D:\MyRepo\OMCApi\OMCApi\OMC.DAL.Library\obj\Debug\OMC.DAL.Library.pdb
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.DAL.Library\bin\Debug\OMC.DAL.Library.dll
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.DAL.Library\bin\Debug\OMC.DAL.Library.pdb
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.DAL.Library\bin\Debug\log4net.dll
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.DAL.Library\bin\Debug\Newtonsoft.Json.dll
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.DAL.Library\bin\Debug\OMC.DAL.Interface.dll
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.DAL.Library\bin\Debug\OMC.Models.dll
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.DAL.Library\bin\Debug\OMC.Models.pdb
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.DAL.Library\bin\Debug\log4net.xml
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.DAL.Library\bin\Debug\Newtonsoft.Json.xml
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.DAL.Library\bin\Debug\OMC.DAL.Interface.pdb
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.DAL.Library\obj\Debug\OMC.DAL.Library.csprojResolveAssemblyReference.cache
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.DAL.Library\obj\Debug\OMC.DAL.Library.csproj.CoreCompileInputs.cache
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.DAL.Library\obj\Debug\OMC.DAL.Library.dll
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.DAL.Library\obj\Debug\OMC.DAL.Library.pdb

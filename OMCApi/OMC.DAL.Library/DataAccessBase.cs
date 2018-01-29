@@ -3,6 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using OMC.Models;
 using System;
+using log4net;
 
 namespace OMC.DAL.Library
 {
@@ -11,6 +12,7 @@ namespace OMC.DAL.Library
         #region Properties
         public SqlConnection Connection { get; set; }
         public SqlCommand Command { get; set; }
+        public static readonly ILog Log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         #endregion
 
         #region Constructors 

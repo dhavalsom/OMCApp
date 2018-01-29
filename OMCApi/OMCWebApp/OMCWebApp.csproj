@@ -53,14 +53,6 @@
     <Reference Include="Ninject">
       <HintPath>..\..\..\..\OMCApi\OMC.Modules\bin\Debug\Ninject.dll</HintPath>
     </Reference>
-    <Reference Include="OMC.BL.Interface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\OMC.BL.Interface\bin\Debug\OMC.BL.Interface.dll</HintPath>
-    </Reference>
-    <Reference Include="OMC.BL.Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\OMC.BL.Library\bin\Debug\OMC.BL.Library.dll</HintPath>
-    </Reference>
     <Reference Include="OMC.DAL.Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\OMC.DAL.Library\bin\Debug\OMC.DAL.Library.dll</HintPath>
@@ -68,10 +60,6 @@
     <Reference Include="OMC.Models, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\OMC.Models\bin\Debug\OMC.Models.dll</HintPath>
-    </Reference>
-    <Reference Include="OMC.Modules, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\OMC.Modules\bin\Debug\OMC.Modules.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -231,6 +219,20 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OMC.BL.Interface\OMC.BL.Interface.csproj">
+      <Project>{545c2273-3a99-49d8-89a2-41192368bafb}</Project>
+      <Name>OMC.BL.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OMC.BL.Library\OMC.BL.Library.csproj">
+      <Project>{050211e5-eb81-4212-b2c5-79d88e467285}</Project>
+      <Name>OMC.BL.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OMC.Modules\OMC.Modules.csproj">
+      <Project>{0a52e95c-6b70-4ef1-89fd-8a8ea9719b80}</Project>
+      <Name>OMC.Modules</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

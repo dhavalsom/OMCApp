@@ -27,3 +27,17 @@ D:\MyRepo\OMCApi\OMCApi\OMC.BL.Library\bin\Debug\OMC.Models.pdb
 D:\MyRepo\OMCApi\OMCApi\OMC.BL.Library\obj\Debug\OMC.BL.Library.csprojResolveAssemblyReference.cache
 D:\MyRepo\OMCApi\OMCApi\OMC.BL.Library\obj\Debug\OMC.BL.Library.dll
 D:\MyRepo\OMCApi\OMCApi\OMC.BL.Library\obj\Debug\OMC.BL.Library.pdb
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.BL.Library\obj\Debug\OMC.BL.Library.csprojResolveAssemblyReference.cache
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.BL.Library\obj\Debug\OMC.BL.Library.csproj.CoreCompileInputs.cache
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.BL.Library\bin\Debug\OMC.BL.Library.dll
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.BL.Library\bin\Debug\OMC.BL.Library.pdb
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.BL.Library\bin\Debug\OMC.BL.Interface.dll
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.BL.Library\bin\Debug\OMC.DAL.Interface.dll
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.BL.Library\bin\Debug\OMC.Models.dll
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.BL.Library\bin\Debug\OMC.BL.Interface.pdb
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.BL.Library\bin\Debug\OMC.DAL.Interface.pdb
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.BL.Library\bin\Debug\OMC.Models.pdb
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.BL.Library\obj\Debug\OMC.BL.Library.dll
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.BL.Library\obj\Debug\OMC.BL.Library.pdb
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.BL.Library\bin\Debug\Newtonsoft.Json.dll
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.BL.Library\bin\Debug\Newtonsoft.Json.xml
