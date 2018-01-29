@@ -1,7 +1,7 @@
-﻿using OMC.DAL.Interface;
+﻿using Newtonsoft.Json;
+using OMC.DAL.Interface;
 using OMC.Models;
 using System;
-using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -19,6 +19,8 @@ namespace OMC.DAL.Library
         {
             try
             {
+                Log.Info("Started call to InitiateSignInProcess");
+                Log.Info("parameter values" + JsonConvert.SerializeObject(user));
                 Command.CommandText = "SP_GET_LOGIN_DETAILS";
                 Command.CommandType = CommandType.StoredProcedure;
 
@@ -34,6 +36,7 @@ namespace OMC.DAL.Library
                 da.Fill(ds);
 
                 int count = ds.Tables[0].Rows.Count;
+                Log.Info("End call to InitiateSignInProcess");
                 if (count == 1)
                     return true;
                 else
