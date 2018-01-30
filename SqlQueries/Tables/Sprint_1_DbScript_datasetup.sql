@@ -17,10 +17,11 @@ SET IDENTITY_INSERT [dbo].[SystemSettings] OFF
 
 
 SET IDENTITY_INSERT [dbo].[RoleMaster] ON
-INSERT [dbo].[RoleMaster] ([Id], [RoleName], [Active], [AddedBy], [AddedDate], [ModifiedBy], [ModifiedDate], [DeletedBy], [DeletedDate]) VALUES (1, N'CSR', 1, 1, CAST(0x070084B1109BC23D0B4A01 AS DateTimeOffset), NULL, NULL, NULL, NULL)
-INSERT [dbo].[RoleMaster] ([Id], [RoleName], [Active], [AddedBy], [AddedDate], [ModifiedBy], [ModifiedDate], [DeletedBy], [DeletedDate]) VALUES (2, N'CSRAdmin', 1, 1, CAST(0x070084B1109BC23D0B4A01 AS DateTimeOffset), NULL, NULL, NULL, NULL)
-INSERT [dbo].[RoleMaster] ([Id], [RoleName], [Active], [AddedBy], [AddedDate], [ModifiedBy], [ModifiedDate], [DeletedBy], [DeletedDate]) VALUES (3, N'Patient', 1, 1, CAST(0x070084B1109BC23D0B4A01 AS DateTimeOffset), NULL, NULL, NULL, NULL)
-INSERT [dbo].[RoleMaster] ([Id], [RoleName], [Active], [AddedBy], [AddedDate], [ModifiedBy], [ModifiedDate], [DeletedBy], [DeletedDate]) VALUES (4, N'Doctor', 1, 1, CAST(0x070084B1109BC23D0B4A01 AS DateTimeOffset), NULL, NULL, NULL, NULL)
+INSERT [dbo].[RoleMaster] ([Id], [RoleName], [Active], [AddedBy], [AddedDate], [ModifiedBy], [ModifiedDate], [DeletedBy], [DeletedDate]) VALUES (1, N'Owner', 1, 1, CAST(0x070084B1109BC23D0B4A01 AS DateTimeOffset), NULL, NULL, NULL, NULL)
+INSERT [dbo].[RoleMaster] ([Id], [RoleName], [Active], [AddedBy], [AddedDate], [ModifiedBy], [ModifiedDate], [DeletedBy], [DeletedDate]) VALUES (2, N'CSR', 1, 1, CAST(0x070084B1109BC23D0B4A01 AS DateTimeOffset), NULL, NULL, NULL, NULL)
+INSERT [dbo].[RoleMaster] ([Id], [RoleName], [Active], [AddedBy], [AddedDate], [ModifiedBy], [ModifiedDate], [DeletedBy], [DeletedDate]) VALUES (3, N'CSRAdmin', 1, 1, CAST(0x070084B1109BC23D0B4A01 AS DateTimeOffset), NULL, NULL, NULL, NULL)
+INSERT [dbo].[RoleMaster] ([Id], [RoleName], [Active], [AddedBy], [AddedDate], [ModifiedBy], [ModifiedDate], [DeletedBy], [DeletedDate]) VALUES (4, N'Patient', 1, 1, CAST(0x070084B1109BC23D0B4A01 AS DateTimeOffset), NULL, NULL, NULL, NULL)
+INSERT [dbo].[RoleMaster] ([Id], [RoleName], [Active], [AddedBy], [AddedDate], [ModifiedBy], [ModifiedDate], [DeletedBy], [DeletedDate]) VALUES (5, N'Doctor', 1, 1, CAST(0x070084B1109BC23D0B4A01 AS DateTimeOffset), NULL, NULL, NULL, NULL)
 SET IDENTITY_INSERT [dbo].[RoleMaster] OFF
 
 SET IDENTITY_INSERT [dbo].[GenderMaster] ON
