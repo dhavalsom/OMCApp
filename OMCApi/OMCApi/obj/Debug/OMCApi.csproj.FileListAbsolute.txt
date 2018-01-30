@@ -325,3 +325,5 @@ E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMCApi\bin\Microsoft.AI.WindowsServer.
 E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMCApi\bin\Microsoft.AI.Web.xml
 E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMCApi\obj\Debug\OMCApi.dll
 E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMCApi\obj\Debug\OMCApi.pdb
+D:\MyRepo\OMCApi\OMCApi\OMCApi\bin\log4net.dll
+D:\MyRepo\OMCApi\OMCApi\OMCApi\bin\log4net.xml

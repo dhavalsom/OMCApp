@@ -165,3 +165,5 @@ E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMCWebApp\bin\OMC.DAL.Interface.pdb
 E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMCWebApp\bin\log4net.xml
 E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMCWebApp\obj\Debug\OMCWebApp.dll
 E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMCWebApp\obj\Debug\OMCWebApp.pdb
+D:\MyRepo\OMCApi\OMCApi\OMCWebApp\bin\log4net.dll
+D:\MyRepo\OMCApi\OMCApi\OMCWebApp\bin\log4net.xml

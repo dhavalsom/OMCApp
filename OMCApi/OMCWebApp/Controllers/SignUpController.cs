@@ -77,7 +77,14 @@ namespace OMCWebApp.Controllers
                         return View("LoginFailure");
                 }
                 else
-                    return View("LoginFailure");
+                {
+                    var SignInResponse = Res.Content.ReadAsStringAsync().Result;
+                    ViewData["ErrorMessage"] = SignInResponse.ToString();
+                    return View("SignUpFailure");
+                    
+                }
+                    //return View("Index");
+                //return View("LoginFailure");
 
             }
         }

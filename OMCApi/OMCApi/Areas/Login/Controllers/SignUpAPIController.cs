@@ -41,10 +41,16 @@ namespace OMCApi.Areas.Login.Controllers
 
         [HttpPost]
         [Route("PostUserSignUp")]
-        public bool PostUserSignUp([FromBody]UserSignUp userdetails)
+        public IHttpActionResult PostUserSignUp([FromBody]UserSignUp userdetails)
         {
-            var SignUpObj = _Kernel.Get<ISignUp>();
+            if (!ModelState.IsValid)
+            {
+                //return (IHttpActionResult)Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                return BadRequest(ModelState);
+            }
 
+            var SignUpObj = _Kernel.Get<ISignUp>();
+            //HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, "value");
             var SignUpValidation = SignUpObj.ValidateSignUpDetails(userdetails);
 
             var SignUpResult = false;
@@ -53,9 +59,11 @@ namespace OMCApi.Areas.Login.Controllers
             {
                 SignUpResult = SignUpObj.InitiateSignUpProcess(userdetails);
             }
-            
+            else
+                return BadRequest(SignUpValidation.Message);
 
-            return SignUpResult;
+            return Ok("Patient details saved");
+            //return SignUpResult;
         }
 
         // PUT: api/SignUpAPI/5

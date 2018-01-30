@@ -25,3 +25,4 @@ E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.DAL.Interface\obj\Debug\OMC.DAL.In
 E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.DAL.Interface\obj\Debug\OMC.DAL.Interface.csproj.CoreCompileInputs.cache
 E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.DAL.Interface\obj\Debug\OMC.DAL.Interface.dll
 E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.DAL.Interface\obj\Debug\OMC.DAL.Interface.pdb
+D:\MyRepo\OMCApi\OMCApi\OMC.DAL.Interface\obj\Debug\OMC.DAL.Interface.csprojResolveAssemblyReference.cache
