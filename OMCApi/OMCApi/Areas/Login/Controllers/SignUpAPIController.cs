@@ -43,6 +43,19 @@ namespace OMCApi.Areas.Login.Controllers
         [Route("PostUserSignUp")]
         public IHttpActionResult PostUserSignUp([FromBody]UserSignUp userdetails)
         {
+
+            //CSR level validation
+            if (userdetails.UserType == 3)
+            {
+                ModelState["Gender"].Errors.Clear();
+                //ModelState.Remove("Gender");
+            }
+            if (userdetails.UserType == 1)
+            {
+                ModelState.Remove("Address");
+                ModelState.Remove("AlternateNo");
+            }
+
             if (!ModelState.IsValid)
             {
                 //return (IHttpActionResult)Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);

@@ -19,25 +19,31 @@ namespace OMC.Models
         public string LastName { get; set; }
         //[RegularExpression(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$")]
         [Required]
-        [EmailAddress(ErrorMessage = "Bad email")]
+        [EmailAddress(ErrorMessage = "Email address not of valid format")]
         public string EmailAddress { get; set; }
-        //[Required(ErrorMessage = "Address required")]
+        [Required(ErrorMessage = "Address required")]
         public string Address { get; set; }
         [Required(ErrorMessage = "PhoneNumber required")]
+        [RegularExpression(@"^(\d{10})$", ErrorMessage = "PhoneNumber is of wrong format")]
         public string PhoneNumber { get; set; }
-        [Required(ErrorMessage = "Gender")]
+        [Required(ErrorMessage = "Gender required")]
         public string Gender { get; set; }
-        [Required(ErrorMessage = "DOB")]
+        [Required(ErrorMessage = "DOB required")]
         public string DOB { get; set; }
-        [Required(ErrorMessage = "Password")]
+        [Required(ErrorMessage = "Password required")]
         public string Password { get; set; }
+        [Required(ErrorMessage = "AlternateNo required")]
+        [RegularExpression(@"^(\d{10})$", ErrorMessage = "AlternateNo is of wrong format")]
         public string AlternateNo { get; set; }
+        [RegularExpression(@"^(\d{10})$", ErrorMessage = "EmergencyContactNo is of wrong format")]
         public string EmergencyContactNo { get; set; }
         public string EmergencyContactPerson { get; set; }
         public string DLNumber { get; set; }
         public string SSN { get; set; }
         public int UserType { get; set; }
         public int Active { get; set; }
+        public string CallerUserID { get; set; }
+        
         #endregion
 
         #region Serialization

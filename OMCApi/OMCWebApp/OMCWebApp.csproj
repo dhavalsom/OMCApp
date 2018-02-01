@@ -203,6 +203,7 @@
     <Content Include="Views\Login\LoginFailure.cshtml" />
     <Content Include="Views\SignUp\Index.cshtml" />
     <Content Include="Views\SignUp\SignUpFailure.cshtml" />
+    <Content Include="Views\SignUp\CSRSignUp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
