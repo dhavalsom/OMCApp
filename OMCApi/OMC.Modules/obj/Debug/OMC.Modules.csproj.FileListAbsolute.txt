@@ -81,3 +81,5 @@ E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Modules\bin\Debug\OMC.Models.pdb
 E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Modules\bin\Debug\log4net.xml
 E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Modules\obj\Debug\OMC.Modules.dll
 E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Modules\obj\Debug\OMC.Modules.pdb
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Modules\bin\Debug\Newtonsoft.Json.dll
+E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.Modules\bin\Debug\Newtonsoft.Json.xml

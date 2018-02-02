@@ -29,43 +29,26 @@ namespace OMCApi.Areas.Login.Controllers
         }
 
         #endregion
-
-
-        // GET: api/LoginAPI
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
-        // GET: api/LoginAPI/5
-        //public string Get(int id)
-        //{
-        //    return "value";
-        //}
-
+        
         // POST: api/LoginAPI
         [HttpPost]
         [Route("PostUserLogin")]
-        public bool PostUserLogin([FromBody]UserLogin user)
+        public SignInResponse PostUserLogin([FromBody]UserLogin user)
         {
             var SignInObj = _Kernel.Get<ISignIn>();
-
-            string username = user.Username;
-            string password = user.Password;
-
             var SignInResult = SignInObj.InitiateSignInProcess(user);
-
             return SignInResult;
         }
 
-        // PUT: api/LoginAPI/5
-        //public void Put(int id, [FromBody]string value)
-        //{
-        //}
+        // POST: api/LoginAPI
+        [HttpPost]
+        [Route("GetAccessCode")]
+        public UserAccessCodeResponse GetAccessCode([FromBody]UserLogin user)
+        {
+            var SignInObj = _Kernel.Get<ISignIn>();
+            var getUserAccessCodeResult = SignInObj.GetAccessCode(user);
 
-        // DELETE: api/LoginAPI/5
-        //public void Delete(int id)
-        //{
-        //}
+            return getUserAccessCodeResult;
+        }
     }
 }

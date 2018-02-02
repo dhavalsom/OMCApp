@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OMC.Models;
-
+﻿using OMC.Models;
+using System;
 
 namespace OMC.BL.Interface
 {
     public interface ISignIn : IDisposable
     {
-      bool InitiateSignInProcess(UserLogin user);
+        SignInResponse InitiateSignInProcess(UserLogin user);
+        UserAccessCodeResponse GetAccessCode(UserLogin user);
     }
 }

@@ -1,16 +1,17 @@
 USE [HealthCare]
 GO
 
-/****** Object:  StoredProcedure [dbo].[SP_USER_DETAIL_MANAGER]    Script Date: 1/26/2018 9:18:22 PM ******/
+/****** Object:  StoredProcedure [dbo].[SP_USER_DETAIL_MANAGER]    Script Date: 1/30/2018 12:35:23 PM ******/
 DROP PROCEDURE [dbo].[SP_USER_DETAIL_MANAGER]
 GO
 
-/****** Object:  StoredProcedure [dbo].[SP_USER_DETAIL_MANAGER]    Script Date: 1/26/2018 9:18:22 PM ******/
+/****** Object:  StoredProcedure [dbo].[SP_USER_DETAIL_MANAGER]    Script Date: 1/30/2018 12:35:23 PM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 CREATE PROCEDURE [dbo].[SP_USER_DETAIL_MANAGER]
 (
@@ -152,10 +153,11 @@ BEGIN
 		SET [ACTIVE] = 0
 			,[DeletedBy] = @USER_ID
 			,[DeletedDate] = GETDATE()
-		WHERE Id = @Id
+		WHERE Id = @USER_ID
 END
 
 END
+
 GO
 
 

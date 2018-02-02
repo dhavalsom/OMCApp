@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 using OMC.BL.Interface;
 using OMC.DAL.Interface;
 using OMC.Models;
+using OMC.BL.Library.Helpers;
 
 namespace OMC.BL.Library
 {
-    public class SignIn:ISignIn
+    public class SignIn : ISignIn
     {
 
         #region Declarations
@@ -21,21 +22,46 @@ namespace OMC.BL.Library
             this._signInDA = SignInDA;
         }
 
-        public bool InitiateSignInProcess(UserLogin user)
+        public SignInResponse InitiateSignInProcess(UserLogin user)
         {
             try
             {
-                bool isSignin = this._signInDA.InitiateSignInProcess(user);
+                SignInResponse isSignin = this._signInDA.InitiateSignInProcess(user);
                 return isSignin;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                //Log
-                return false;
+                throw;
             }
             finally
             {
                 //Log
+            }
+        }
+
+        public UserAccessCodeResponse GetAccessCode(UserLogin user)
+        {
+            try
+            {
+                var userAccessCodeResponse =  this._signInDA.GetAccessCode(user);
+                if (user.GetCodeMethod.ToLower() == "email")
+                {
+                    var objEmail = this._signInDA.GetEmailData("GET_ACCESS_CODE");
+                    objEmail.Body = string.Format(objEmail.Body, userAccessCodeResponse.AccessCode);
+                    EmailHelper.SendEmail(objEmail, userAccessCodeResponse.EmailAddress);
+                }
+                else
+                {
+                    //write code to send sms
+                }
+                return userAccessCodeResponse;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
             }
         }
 

@@ -17,7 +17,10 @@
     @Html.TextBoxFor(m => m.Username)
     <br />
     @Html.LabelFor(m => m.Password)
-    @Html.TextBoxFor(m => m.Password)
+    @Html.PasswordFor(m => m.Password)
+    <br />
+    @Html.LabelFor(m => m.IPAddress)
+    @Html.TextBoxFor(m => m.IPAddress)
     <br />
     <button type="submit">Signin</button>
     <br />

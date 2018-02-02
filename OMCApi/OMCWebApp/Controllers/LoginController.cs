@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using OMC.Models;
+﻿using Newtonsoft.Json;
 using Ninject;
-using OMC.BL.Interface;
-using System.Threading.Tasks;
-using System.Net.Http;
+using OMC.Models;
+using OMCWebApp.Models;
+using System;
 using System.Configuration;
+using System.Net.Http;
 using System.Net.Http.Headers;
-using Newtonsoft.Json;
 using System.Text;
+using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace OMCApi.Areas.Login.Controllers
 {
@@ -46,35 +43,36 @@ namespace OMCApi.Areas.Login.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Signin(UserLogin user)
         {
-            //var SignInObj = _Kernel.Get<ISignIn>();
-
-            string username = user.Username;
-            string password = user.Password;
-
             using (var client = new HttpClient())
             {
-                
-                //Passing service base url  
                 client.BaseAddress = new Uri(ConfigurationManager.AppSettings["BaseUrl"]);
-
                 client.DefaultRequestHeaders.Clear();
-                //Define request data format  
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
                 var json = JsonConvert.SerializeObject(user);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
                 HttpResponseMessage Res = await client.PostAsync("api/LoginAPI/PostUserLogin", content);
                 
-                //Checking the response is successful or not which is sent using HttpClient  
                 if (Res.IsSuccessStatusCode)
                 {
-                    //Storing the response details recieved from web api   
-                    var SignInResponse = Res.Content.ReadAsStringAsync().Result;
-
-                    //Deserializing the response recieved from web api and storing into the Employee list  
-                    //UserInfo = JsonConvert.DeserializeObject<List<User>>(SignInResponse);
-                    if (Convert.ToBoolean(SignInResponse))
-                        return View();
+                    var SignInResponse = JsonConvert.DeserializeObject<SignInResponse>( Res.Content.ReadAsStringAsync().Result);
+                    if (SignInResponse.IsPasswordVerified)
+                    {
+                        if (SignInResponse.TwoFactorAuthDone)
+                        {
+                            return View();
+                        }
+                        else
+                        {
+                            var model = new GetAccessCodeModel
+                            {
+                                ObjSignInResponse = SignInResponse,
+                                IPAddress = user.IPAddress,
+                                UserName = user.Username,
+                                Method = "Email"
+                            };
+                            return View("GetAccessCode", model);
+                        }
+                    }
                     else
                         return View("LoginFailure");
                 }
@@ -84,6 +82,32 @@ namespace OMCApi.Areas.Login.Controllers
             }
             
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> GetAccessCode(GetAccessCodeModel getAccessCodeModel)
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(ConfigurationManager.AppSettings["BaseUrl"]);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                var json = JsonConvert.SerializeObject(new UserLogin
+                                                        {
+                                                            UserId = getAccessCodeModel.ObjSignInResponse.UserId,
+                                                            IPAddress = getAccessCodeModel.IPAddress
+                });
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                HttpResponseMessage Res = await client.PostAsync("api/LoginAPI/GetAccessCode", content);
+
+                if (Res.IsSuccessStatusCode)
+                {
+                    var UserAccessCodeResponse = JsonConvert.DeserializeObject<UserAccessCodeResponse>(Res.Content.ReadAsStringAsync().Result);                    
+                }
+                return View("LoginFailure");
+            }
+        }
+        
         // GET: Login/Login/Details/5
         public ActionResult Details(int id)
         {
