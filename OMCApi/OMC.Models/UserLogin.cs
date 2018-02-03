@@ -21,6 +21,7 @@ namespace OMC.Models
         public bool TwoFactorAuthDone { get; set; }
         public DateTime? TwoFactorAuthTimestamp { get; set; }
         public string SessionId { get; set; }
+        public bool IsUserActive { get; set; }
     }
 
     public class UserAccessCodeResponse

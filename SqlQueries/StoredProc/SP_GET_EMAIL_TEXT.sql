@@ -1,16 +1,17 @@
 USE [HealthCare]
 GO
 
-/****** Object:  StoredProcedure [dbo].[SP_GET_EMAIL_TEXT]    Script Date: 2/1/2018 9:48:55 PM ******/
+/****** Object:  StoredProcedure [dbo].[SP_GET_EMAIL_TEXT]    Script Date: 2/3/2018 10:41:25 AM ******/
 DROP PROCEDURE [dbo].[SP_GET_EMAIL_TEXT]
 GO
 
-/****** Object:  StoredProcedure [dbo].[SP_GET_EMAIL_TEXT]    Script Date: 2/1/2018 9:48:55 PM ******/
+/****** Object:  StoredProcedure [dbo].[SP_GET_EMAIL_TEXT]    Script Date: 2/3/2018 10:41:25 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 CREATE PROCEDURE [dbo].[SP_GET_EMAIL_TEXT]
@@ -28,6 +29,7 @@ BEGIN
 	FROM [EmailMaster]
 	WHERE EmailType = @EMAIL_TYPE
 END
+
 
 
 

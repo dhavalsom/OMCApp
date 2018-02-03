@@ -54,18 +54,18 @@ namespace OMCApi.Areas.Login.Controllers
                 
                 if (Res.IsSuccessStatusCode)
                 {
-                    var SignInResponse = JsonConvert.DeserializeObject<SignInResponse>( Res.Content.ReadAsStringAsync().Result);
-                    if (SignInResponse.IsPasswordVerified)
+                    var objSignInResponse = JsonConvert.DeserializeObject<SignInResponse>( Res.Content.ReadAsStringAsync().Result);
+                    if (objSignInResponse.IsPasswordVerified && objSignInResponse.IsUserActive)
                     {
-                        if (SignInResponse.TwoFactorAuthDone)
+                        if (objSignInResponse.TwoFactorAuthDone)
                         {
-                            return View(SignInResponse);
+                            return View(objSignInResponse);
                         }
                         else
                         {
                             var model = new GetAccessCodeModel
                             {
-                                ObjSignInResponse = SignInResponse,
+                                ObjSignInResponse = objSignInResponse,
                                 IPAddress = user.IPAddress,
                                 UserName = user.Username,
                                 Method = "Email"
@@ -74,10 +74,10 @@ namespace OMCApi.Areas.Login.Controllers
                         }
                     }
                     else
-                        return View("LoginFailure");
+                        return View("LoginFailure", objSignInResponse);
                 }
                 else
-                    return View("LoginFailure");
+                    return View("LoginFailure", new SignInResponse { IsPasswordVerified = false });
 
             }
             

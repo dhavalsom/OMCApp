@@ -1,8 +1,16 @@
-﻿
+﻿@model OMC.Models.SignInResponse
 @{
     ViewBag.Title = "LoginFailure";
 }
 
-<h2>LoginFailure</h2>
-Either user name or password is wrong
+<h2>Login Failure</h2>
+@if (Model.IsPasswordVerified && !Model.IsUserActive)
+{
+    <b><font color="red">User Account locked. Please contact system administrator. </font></b>
+}
+else
+{
+    <b><font color="red">Either user name or password is wrong.</font></b>
+}
+
 

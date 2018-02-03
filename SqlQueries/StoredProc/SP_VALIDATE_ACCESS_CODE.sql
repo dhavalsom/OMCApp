@@ -1,16 +1,17 @@
 USE [HealthCare]
 GO
 
-/****** Object:  StoredProcedure [dbo].[SP_VALIDATE_ACCESS_CODE]    Script Date: 2/2/2018 9:02:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_VALIDATE_ACCESS_CODE]    Script Date: 2/3/2018 10:42:14 AM ******/
 DROP PROCEDURE [dbo].[SP_VALIDATE_ACCESS_CODE]
 GO
 
-/****** Object:  StoredProcedure [dbo].[SP_VALIDATE_ACCESS_CODE]    Script Date: 2/2/2018 9:02:03 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_VALIDATE_ACCESS_CODE]    Script Date: 2/3/2018 10:42:14 AM ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 
 
@@ -129,6 +130,7 @@ SELECT @MESSAGE AS [Message]
 	  , @IS_VALID_CODE_PASSED as 'IsValidCodePassed'
 	  , @UNSUCCESSFUL_ATTEMPT_COUNT AS 'UnsuccessfulAttemptCount'
 	  , ISNULL(@IS_ACCOUNT_LOCKED,0) AS 'IsAccountLocked'
+
 
 
 GO

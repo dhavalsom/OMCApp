@@ -42,6 +42,7 @@ namespace OMC.DAL.Library
                             RoleId = !string.IsNullOrEmpty(reader["RoleId"].ToString()) ? Convert.ToInt32(reader["RoleId"].ToString()) : (int?)null,
                             SessionId = reader["SESSION_ID"] != DBNull.Value ? reader["SESSION_ID"].ToString() : null,
                             TwoFactorAuthDone = Convert.ToBoolean(reader["TWO_FACTOR_AUTH_DONE"]),
+                            IsUserActive = Convert.ToBoolean(reader["IS_USER_ACTIVE"]),
                             TwoFactorAuthTimestamp = !string.IsNullOrEmpty(reader["TWO_FACTOR_AUTH_TS"].ToString())
                                                    ? Convert.ToDateTime(reader["TWO_FACTOR_AUTH_TS"].ToString()) 
                                                    : (DateTime?)null,
