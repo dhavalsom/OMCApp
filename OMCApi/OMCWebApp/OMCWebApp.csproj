@@ -17,7 +17,7 @@
     <AssemblyName>OMCWebApp</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <Use64BitIISExpress>false</Use64BitIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -155,7 +155,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Controllers\PatientProblemsController.cs" />
+    <Compile Include="Controllers\PatientProblemController.cs" />
     <Compile Include="Controllers\SignUpController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -204,11 +204,11 @@
     <Content Include="Views\Login\LoginFailure.cshtml" />
     <Content Include="Views\SignUp\Index.cshtml" />
     <Content Include="Views\SignUp\SignUpFailure.cshtml" />
+    <Content Include="Views\PatientProblem\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\PatientProblems\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -255,7 +255,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50198</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50198/</IISUrl>
+          <IISUrl>http://localhost/OMCWebApp</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
