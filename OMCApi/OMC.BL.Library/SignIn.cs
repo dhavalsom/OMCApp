@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OMC.BL.Interface;
+﻿using OMC.BL.Interface;
+using OMC.BL.Library.Helpers;
 using OMC.DAL.Interface;
 using OMC.Models;
-using OMC.BL.Library.Helpers;
+using System;
 
 namespace OMC.BL.Library
 {
     public class SignIn : ISignIn
     {
-
         #region Declarations
         ISignInDataAccess _signInDA;
         #endregion

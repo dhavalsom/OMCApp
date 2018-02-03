@@ -3,6 +3,7 @@ using Ninject;
 using OMC.Models;
 using OMCWebApp.Models;
 using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -34,9 +35,25 @@ namespace OMCApi.Areas.Login.Controllers
         #region Methods
 
         // GET: Login/Login
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            return View();
+            var model = new UserLogin();
+
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(ConfigurationManager.AppSettings["BaseUrl"]);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                var json = JsonConvert.SerializeObject(new { isActive = true, roleDescription = string.Empty });
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                HttpResponseMessage Res = await client.GetAsync("api/LoginAPI/GetRoles?isActive=true&roleDescription");
+                if (Res.IsSuccessStatusCode)
+                {
+                    model.RoleList = JsonConvert.DeserializeObject<List<Role>>(Res.Content.ReadAsStringAsync().Result);
+                }
+            }
+
+            return View(model);
         }
 
         [HttpPost]
@@ -55,7 +72,9 @@ namespace OMCApi.Areas.Login.Controllers
                 if (Res.IsSuccessStatusCode)
                 {
                     var objSignInResponse = JsonConvert.DeserializeObject<SignInResponse>( Res.Content.ReadAsStringAsync().Result);
-                    if (objSignInResponse.IsPasswordVerified && objSignInResponse.IsUserActive)
+                    if (objSignInResponse.IsPasswordVerified 
+                        && objSignInResponse.RoleId.HasValue
+                        && objSignInResponse.IsUserActive)
                     {
                         if (objSignInResponse.TwoFactorAuthDone)
                         {

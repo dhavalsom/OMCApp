@@ -1,6 +1,6 @@
 ﻿namespace OMC.Models
 {
-    public class ErrorLog
+    public class ErrorLog : BaseEntity
     {
         public string Message { get; set; }
         public string StackTrace { get; set; }

@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-using OMC.Models;
-using Ninject;
+﻿using Ninject;
 using OMC.BL.Interface;
+using OMC.Models;
+using System.Collections.Generic;
+using System.Web.Http;
 
 namespace OMCApi.Areas.Login.Controllers
 {
@@ -29,7 +25,17 @@ namespace OMCApi.Areas.Login.Controllers
         }
 
         #endregion
-        
+
+        // Get: api/LoginAPI/GetRoles
+        [HttpGet]
+        [Route("GetRoles")]
+        public List<Role> GetRoles(bool? isActive, string roleDescription)
+        {
+            var masterObj = _Kernel.Get<IMaster>();
+            return masterObj.GetRoles(isActive, roleDescription);
+        }
+
+
         // POST: api/LoginAPI
         [HttpPost]
         [Route("PostUserLogin")]

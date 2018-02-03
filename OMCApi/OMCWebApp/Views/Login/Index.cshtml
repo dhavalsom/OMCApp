@@ -1,18 +1,11 @@
 ﻿@model  OMC.Models.UserLogin
 
-
-
-<h2>Index</h2>
+<h2>Login here</h2>
 @using (Html.BeginForm("Signin", "Login"))
 {
 
     @Html.AntiForgeryToken()
-
-    @*@Html.TextBox("username")
-
-        @Html.TextBox("password")
-        <br />*@
-
+    
     @Html.LabelFor(m => m.Username)
     @Html.TextBoxFor(m => m.Username)
     <br />
@@ -21,6 +14,9 @@
     <br />
     @Html.LabelFor(m => m.IPAddress)
     @Html.TextBoxFor(m => m.IPAddress)
+    <br />
+    @Html.LabelFor(m => m.RoleId)
+    @Html.DropDownListFor(m => m.RoleId, new SelectList(Model.RoleList, "Id", "RoleName"), "--please select--")
     <br />
     <button type="submit">Signin</button>
     <br />

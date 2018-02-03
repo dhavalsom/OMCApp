@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace OMC.Models
 {
@@ -10,6 +11,7 @@ namespace OMC.Models
         public int? RoleId { get; set; }
         public int? UserId { get; set; }
         public string GetCodeMethod { get; set; }
+        public List<Role> RoleList { get; set; }
     }
 
     public class SignInResponse

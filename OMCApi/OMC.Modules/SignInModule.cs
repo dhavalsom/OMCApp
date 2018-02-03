@@ -6,7 +6,7 @@ using OMC.DAL.Library;
 
 namespace OMC.Modules
 {
-    public class SignInModule:NinjectModule
+    public class SignInModule : NinjectModule
     {
         public override void Load()
         {
@@ -14,6 +14,8 @@ namespace OMC.Modules
             {
                 Bind<ISignIn>().To<SignIn>();
                 Bind<ISignInDataAccess>().To<SignInDataAccess>();
+                Bind<IMaster>().To<Master>();
+                Bind<IMasterDataAccess>().To<MasterDataAccess>();
             }
             catch
             {

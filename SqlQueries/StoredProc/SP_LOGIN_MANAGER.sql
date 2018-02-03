@@ -1,11 +1,11 @@
 USE [HealthCare]
 GO
 
-/****** Object:  StoredProcedure [dbo].[SP_LOGIN_MANAGER]    Script Date: 2/3/2018 10:41:58 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_LOGIN_MANAGER]    Script Date: 2/3/2018 1:01:18 PM ******/
 DROP PROCEDURE [dbo].[SP_LOGIN_MANAGER]
 GO
 
-/****** Object:  StoredProcedure [dbo].[SP_LOGIN_MANAGER]    Script Date: 2/3/2018 10:41:58 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_LOGIN_MANAGER]    Script Date: 2/3/2018 1:01:18 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -26,8 +26,8 @@ AS
 BEGIN
 
 --EXEC [dbo].[SP_LOGIN_MANAGER] '+919619645344','10dulkaree', '101.120.222.558',2
---EXEC [dbo].[SP_LOGIN_MANAGER] 'kunalsmehtajobs@gmail.com','10dulkar', '101.120.222.558',2
-
+--EXEC [dbo].[SP_LOGIN_MANAGER] 'kunalsmehtajobs@gmail.com','10dulkar', '101.120.222.558',5
+--EXEC [dbo].[SP_LOGIN_MANAGER] 'kunalsmehtajobs@gmail.com','10dulkar', '101.120.222.558',NULL
 DECLARE @USER_ID AS BIGINT, @USER_ROLE_ID AS BIGINT, @USER_DEVICE_ID AS BIGINT
 ,@TWO_WAY_AUTH_TIMEOUT_DAYS AS BIGINT, @LOGIN_AUDIT_ID AS BIGINT
 DECLARE @TWO_FACTOR_AUTH_TS AS DATETIME
@@ -38,10 +38,10 @@ SET @IS_USER_ACTIVE = 0
 
 	SELECT @USER_ID = UD.Id, @USER_ROLE_ID = URM.RoleId, @IS_USER_ACTIVE = UD.[Active]
 	FROM UserDetail UD
-	INNER JOIN UserRoleMapping URM on URM.UserId = UD.Id
+	LEFT OUTER JOIN UserRoleMapping URM on URM.UserId = UD.Id AND ((@ROLE_ID IS NULL AND URM.IsDefault = 1) OR @ROLE_ID = URM.RoleId)
 		WHERE (EmailAddress = @USERNAME OR Phonenumber = @USERNAME)
 		AND [Password] = @PASSWORD
-		AND ((@ROLE_ID IS NULL AND URM.IsDefault = 1) OR @ROLE_ID = URM.RoleId)
+		
 
 
 /*IF USER IS FOUND WITH SAME USER ID AND PWD, GO AHEAD*/
@@ -52,7 +52,7 @@ IF @USER_ID IS NOT NULL
 		SET @IS_PASSWORD_VERIFIED = 1
 
 		/*IF THE USER ACCOUNT IS LOCKED WE NEED NOT DO THE FURTHER PROCESS*/
-		IF  @IS_USER_ACTIVE = 1
+		IF  @IS_USER_ACTIVE = 1 AND @USER_ROLE_ID IS NOT NULL
 		BEGIN
 		/*CHECK IF DEVICE IS THERE FOR THE USER OR NOT
 		IF NOT MAKE AN ENTRY IN USER DEVICE DETAIL TABLE
