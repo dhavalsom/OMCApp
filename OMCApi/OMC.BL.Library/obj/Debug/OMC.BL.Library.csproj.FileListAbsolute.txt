@@ -41,3 +41,4 @@ E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.BL.Library\obj\Debug\OMC.BL.Librar
 E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.BL.Library\obj\Debug\OMC.BL.Library.pdb
 E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.BL.Library\bin\Debug\Newtonsoft.Json.dll
 E:\Mahesh Patel\Dhaval Repo\OMCApp\OMCApi\OMC.BL.Library\bin\Debug\Newtonsoft.Json.xml
+D:\MyRepo\OMCApi\OMCApi\OMC.BL.Library\bin\Debug\Newtonsoft.Json.dll
