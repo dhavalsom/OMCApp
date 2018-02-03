@@ -35,7 +35,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="OMC.DAL.Interface">
-      <HintPath>..\OMC.DAL.Interface\bin\Debug\OMC.DAL.Interface.dll</HintPath>
+      <HintPath>..\OMC.DAL.Interface\obj\Debug\OMC.DAL.Interface.dll</HintPath>
     </Reference>
     <Reference Include="OMC.Models">
       <HintPath>..\OMC.Models\bin\Debug\OMC.Models.dll</HintPath>
@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PatientProblem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignIn.cs" />
     <Compile Include="SignUp.cs" />
@@ -58,6 +59,10 @@
     <ProjectReference Include="..\OMC.BL.Interface\OMC.BL.Interface.csproj">
       <Project>{545c2273-3a99-49d8-89a2-41192368bafb}</Project>
       <Name>OMC.BL.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OMC.DAL.Library\OMC.DAL.Library.csproj">
+      <Project>{57c2f5b5-fb8f-436f-ba65-f71335811fd4}</Project>
+      <Name>OMC.DAL.Library</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

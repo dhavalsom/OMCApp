@@ -12,6 +12,7 @@ using OMC.DAL.Interface;
 using OMC.DAL.Library;
 using OMC.Modules;
 using OMCApi;
+using Ninject.Web.Common.WebHost;
 //using SimpleWebApi2.Ninject.Business;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(NinjectWebCommon), "Start")]
@@ -73,6 +74,7 @@ namespace OMCApi
         {
             kernel.Bind<ISignIn>().To<SignIn>();
             kernel.Bind<ISignInDataAccess>().To<SignInDataAccess>();
+            kernel.Load<PatientProblemModule>();
             kernel.Load<SignInModule>();
         }
     }

@@ -33,12 +33,6 @@
     <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
     </Reference>
-    <Reference Include="OMC.DAL.Interface">
-      <HintPath>..\OMC.DAL.Interface\bin\Debug\OMC.DAL.Interface.dll</HintPath>
-    </Reference>
-    <Reference Include="OMC.DAL.Library">
-      <HintPath>..\OMC.DAL.Library\bin\Debug\OMC.DAL.Library.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PatientProblemModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignInModule.cs" />
     <Compile Include="SignUpModule.cs" />
@@ -64,6 +59,14 @@
     <ProjectReference Include="..\OMC.BL.Library\OMC.BL.Library.csproj">
       <Project>{050211e5-eb81-4212-b2c5-79d88e467285}</Project>
       <Name>OMC.BL.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OMC.DAL.Interface\OMC.DAL.Interface.csproj">
+      <Project>{88321bd4-1595-48ff-87d5-13efc45d549c}</Project>
+      <Name>OMC.DAL.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OMC.DAL.Library\OMC.DAL.Library.csproj">
+      <Project>{57c2f5b5-fb8f-436f-ba65-f71335811fd4}</Project>
+      <Name>OMC.DAL.Library</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

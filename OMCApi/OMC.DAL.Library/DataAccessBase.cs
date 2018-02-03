@@ -52,6 +52,11 @@ namespace OMC.DAL.Library
             }
         }
 
+        protected object String(string value)
+        {
+            return !string.IsNullOrWhiteSpace(value) ? value : (object)DBNull.Value;
+        }
+
         #endregion
     }
 }

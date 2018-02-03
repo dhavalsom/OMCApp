@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2024
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OMCApi", "OMCApi\OMCApi.csproj", "{EDB0D44E-7EF4-4B4C-B6E9-A872E702512B}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -20,6 +20,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Container", "Container", "{74E20AA2-5398-407F-88E2-29D3A149B4B7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OMC.BL.Interface", "OMC.BL.Interface\OMC.BL.Interface.csproj", "{545C2273-3A99-49D8-89A2-41192368BAFB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A685AA6B-9DC5-400E-BB08-042BF56C1DB6} = {A685AA6B-9DC5-400E-BB08-042BF56C1DB6}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OMC.BL.Library", "OMC.BL.Library\OMC.BL.Library.csproj", "{050211E5-EB81-4212-B2C5-79D88E467285}"
 EndProject
