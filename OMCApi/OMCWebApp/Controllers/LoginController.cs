@@ -59,7 +59,7 @@ namespace OMCApi.Areas.Login.Controllers
                     {
                         if (SignInResponse.TwoFactorAuthDone)
                         {
-                            return View();
+                            return View(SignInResponse);
                         }
                         else
                         {
@@ -95,88 +95,47 @@ namespace OMCApi.Areas.Login.Controllers
                 var json = JsonConvert.SerializeObject(new UserLogin
                                                         {
                                                             UserId = getAccessCodeModel.ObjSignInResponse.UserId,
-                                                            IPAddress = getAccessCodeModel.IPAddress
+                                                            IPAddress = getAccessCodeModel.IPAddress,
+                                                            GetCodeMethod = getAccessCodeModel.Method
                 });
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
                 HttpResponseMessage Res = await client.PostAsync("api/LoginAPI/GetAccessCode", content);
 
                 if (Res.IsSuccessStatusCode)
                 {
-                    var UserAccessCodeResponse = JsonConvert.DeserializeObject<UserAccessCodeResponse>(Res.Content.ReadAsStringAsync().Result);                    
+                    var UserAccessCodeResponse = JsonConvert.DeserializeObject<UserAccessCodeResponse>(Res.Content.ReadAsStringAsync().Result);
+                    if (!string.IsNullOrEmpty(UserAccessCodeResponse.AccessCode))
+                    {
+                        UserAccessCodeResponse.AccessCode = string.Empty;
+                        return View("ValidateAccessCode", UserAccessCodeResponse);
+                    }
                 }
                 return View("LoginFailure");
             }
         }
-        
-        // GET: Login/Login/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
 
-        // GET: Login/Login/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Login/Login/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> ValidateAccessCode(UserAccessCodeResponse userAccessCode)
         {
-            try
+            using (var client = new HttpClient())
             {
-                // TODO: Add insert logic here
+                client.BaseAddress = new Uri(ConfigurationManager.AppSettings["BaseUrl"]);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                var json = JsonConvert.SerializeObject(userAccessCode);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                HttpResponseMessage Res = await client.PostAsync("api/LoginAPI/ValidateAccessCode", content);
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Login/Login/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: Login/Login/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Login/Login/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Login/Login/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
+                if (Res.IsSuccessStatusCode)
+                {
+                    userAccessCode = JsonConvert.DeserializeObject<UserAccessCodeResponse>(Res.Content.ReadAsStringAsync().Result);
+                    if (userAccessCode.objValidateAccessCodeResponse != null)
+                    {
+                        return View("ValidateAccessCode", userAccessCode);
+                    }
+                }
+                return View("LoginFailure");
             }
         }
 

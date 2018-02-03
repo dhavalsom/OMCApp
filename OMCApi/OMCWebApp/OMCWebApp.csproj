@@ -204,6 +204,7 @@
     <Content Include="Views\Login\LoginFailure.cshtml" />
     <Content Include="Views\SignUp\Index.cshtml" />
     <Content Include="Views\Login\GetAccessCode.cshtml" />
+    <Content Include="Views\Login\ValidateAccessCode.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

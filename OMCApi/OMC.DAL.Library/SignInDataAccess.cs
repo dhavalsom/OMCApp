@@ -111,6 +111,50 @@ namespace OMC.DAL.Library
             }
         }
 
+        public void ValidateAccessCode(UserAccessCodeResponse userAccessCode)
+        {
+            try
+            {
+                Log.Info("Started call to ValidateAccessCode");
+                Log.Info("parameter values: " + JsonConvert.SerializeObject(userAccessCode));
+                Command.CommandText = "SP_VALIDATE_ACCESS_CODE";
+                Command.CommandType = CommandType.StoredProcedure;
+                Command.Parameters.Clear();
+                Command.Parameters.AddWithValue("@USER_ID", userAccessCode.UserId.Value);
+                Command.Parameters.AddWithValue("@USER_LOGIN_AUDIT_ID", userAccessCode.UserLoginAuditId.Value);
+                Command.Parameters.AddWithValue("@ACCESS_CODE", userAccessCode.AccessCode);
+                Connection.Open();
+
+                SqlDataReader reader = Command.ExecuteReader();
+                ValidateAccessCodeResponse result = new ValidateAccessCodeResponse();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        result = new ValidateAccessCodeResponse
+                        {
+                            UnsuccessfulAttemptCount = Convert.ToInt32(reader["UnsuccessfulAttemptCount"].ToString()),
+                            IsValidCodePassed = Convert.ToBoolean(reader["IsValidCodePassed"]),
+                            Message = reader["Message"] != DBNull.Value ? reader["Message"].ToString() : null,
+                            IsAccountLocked = Convert.ToBoolean(reader["IsAccountLocked"])
+                        };
+                    }
+                }
+
+                Log.Info("End call to ValidateAccessCode: " + JsonConvert.SerializeObject(result));
+                userAccessCode.objValidateAccessCodeResponse = result;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+
+            finally
+            {
+                Connection.Close();
+            }
+        }
+
         public Email GetEmailData(string emailType)
         {
             try

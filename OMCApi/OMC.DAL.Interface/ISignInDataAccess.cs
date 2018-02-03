@@ -7,5 +7,6 @@ namespace OMC.DAL.Interface
         SignInResponse InitiateSignInProcess(UserLogin user);
         UserAccessCodeResponse GetAccessCode(UserLogin user);
         Email GetEmailData(string emailType);
+        void ValidateAccessCode(UserAccessCodeResponse userAccessCode);
     }
 }

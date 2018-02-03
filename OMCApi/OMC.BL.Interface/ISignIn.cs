@@ -7,5 +7,6 @@ namespace OMC.BL.Interface
     {
         SignInResponse InitiateSignInProcess(UserLogin user);
         UserAccessCodeResponse GetAccessCode(UserLogin user);
+        void ValidateAccessCode(UserAccessCodeResponse userAccessCode);
     }
 }

@@ -65,6 +65,22 @@ namespace OMC.BL.Library
             }
         }
 
+        public void ValidateAccessCode(UserAccessCodeResponse userAccessCode)
+        {
+            try
+            {
+                this._signInDA.ValidateAccessCode(userAccessCode);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+            }
+        }
+
+
         #region IDisposable
         protected virtual void Dispose(bool disposing)
         {

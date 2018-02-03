@@ -50,5 +50,15 @@ namespace OMCApi.Areas.Login.Controllers
 
             return getUserAccessCodeResult;
         }
+
+        // POST: api/LoginAPI
+        [HttpPost]
+        [Route("ValidateAccessCode")]
+        public UserAccessCodeResponse ValidateAccessCode([FromBody]UserAccessCodeResponse userAccessCode)
+        {
+            var SignInObj = _Kernel.Get<ISignIn>();
+            SignInObj.ValidateAccessCode(userAccessCode);
+            return userAccessCode;
+        }
     }
 }

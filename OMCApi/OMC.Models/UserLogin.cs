@@ -30,5 +30,14 @@ namespace OMC.Models
         public int? UserLoginAuditId { get; set; }
         public string EmailAddress { get; set; }
         public string PhoneNumber { get; set; }
+        public ValidateAccessCodeResponse objValidateAccessCodeResponse { get; set; }
+    }
+
+    public class ValidateAccessCodeResponse
+    {
+        public string Message { get; set; }
+        public bool IsValidCodePassed { get; set; }
+        public int UnsuccessfulAttemptCount { get; set; }
+        public bool IsAccountLocked { get; set; }
     }
 }
