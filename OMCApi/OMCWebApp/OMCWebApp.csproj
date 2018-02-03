@@ -205,6 +205,7 @@
     <Content Include="Views\SignUp\Index.cshtml" />
     <Content Include="Views\SignUp\SignUpFailure.cshtml" />
     <Content Include="Views\PatientProblem\Index.cshtml" />
+    <Content Include="Views\PatientProblem\DoctorsList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

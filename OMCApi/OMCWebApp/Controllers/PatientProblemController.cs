@@ -22,7 +22,7 @@ namespace OMCWebApp.Controllers
         }
 
         // GET: PatientProblem/Details/5
-        public async Task<ActionResult>  GetDoctorDetails(string problem)
+        public async Task<ActionResult> GetDoctorDetails(string problem)
         {
             using (var client = new HttpClient())
             {
@@ -41,21 +41,22 @@ namespace OMCWebApp.Controllers
                 {
                     //Storing the response details recieved from web api   
                     var DoctorsResponse = await Res.Content.ReadAsStringAsync();
-
-                    //Deserializing the response recieved from web api and storing into the Employee list  
-                    IEnumerable<UserDetails> Doctors = JsonConvert.DeserializeObject<IEnumerable<UserDetails>>(DoctorsResponse);
-                    if (Doctors.Count() > 0)
-                        return View("Index");
-                    else
-                        return View("LoginFailure");
+                    if (DoctorsResponse != null)
+                    {
+                        //Deserializing the response recieved from web api and storing into the Employee list  
+                        IEnumerable<UserDetails> Doctors = JsonConvert.DeserializeObject<IEnumerable<UserDetails>>(DoctorsResponse);
+                        if (Doctors.Count() > 0)
+                            return PartialView("DoctorsList", Doctors);
+                    }
                 }
                 else
                 {
                     var SignInResponse = Res.Content.ReadAsStringAsync().Result;
                     ViewData["ErrorMessage"] = SignInResponse.ToString();
                     return View("SignUpFailure");
-
                 }
+                return View("LoginFailure");
+
             }
         }
 

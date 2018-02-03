@@ -1,0 +1,27 @@
+﻿@model IEnumerable<OMC.Models.UserDetails>
+
+<table class="table">
+    <tr>
+        <th>
+            DoctorName
+        </th>
+        <th>
+            Speciality
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName) &nbsp; @Html.DisplayFor(modelItem => item.LastName)
+                
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+
+        </tr>
+    }
+
+</table>
