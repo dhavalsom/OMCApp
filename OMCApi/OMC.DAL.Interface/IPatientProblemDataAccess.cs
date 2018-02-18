@@ -9,6 +9,8 @@
 
     public interface IPatientProblemDataAccess
     {
-        IEnumerable<UserDetails> GetDoctersFromProblem(string problem);
+        IEnumerable<DoctorDetails> GetDoctersFromProblem(string problem, string ipAddress);
+
+        bool ConsultDoctor(int problemId, int doctorId);
     }
 }

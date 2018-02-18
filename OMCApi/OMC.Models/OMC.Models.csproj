@@ -42,9 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseEntity.cs" />
+    <Compile Include="DoctorDetails.cs" />
     <Compile Include="ErrorLog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserDetails.cs" />
     <Compile Include="UserLogin.cs" />
     <Compile Include="UserSignUp.cs" />
   </ItemGroup>

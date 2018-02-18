@@ -3,27 +3,33 @@
     ViewBag.Title = "Index";
 }
 <script src="~/Scripts/jquery-1.10.2.js"></script>
-<h2>Patient Problem</h2>
-
-
-Problem : <input type="text" id="txtProblem" maxlength="200" />
+<h4>Patient Problem</h4>
+<hr />
+Problem : <input type="text" id="txtProblem" maxlength="200" /> &nbsp;
+<input type="button" id="searchProblem" value="Search Doctors" />
+<br />
 <div id="wrapper">
 </div>
-
-
 <script>
-
-
-    $("#txtProblem").on('change', function (e) {
-        $.ajax({
-            url: "GetDoctorDetails",
-            type: "GET",
-            data: { problem : $(this).val()},
-            success: function (result) {
-                $("#wrapper").html(result);
-                $(window).scrollTop(0);
-            }
+    $(function () {
+        $("#searchProblem").on('click', function (e) {
+            $.ajax({
+                url: "GetDoctorDetails",
+                type: "GET",
+                data: { problem: $("#txtProblem").val() },
+                success: function (result) {
+                    if (result != "false") {
+                        $("#wrapper").html(result);
+                        $(window).scrollTop(0);
+                    }
+                    else {
+                        alert("Something went wrong");
+                    }
+                }
+            });
         });
+
     });
+
 
 </script>

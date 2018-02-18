@@ -9,6 +9,8 @@ namespace OMC.BL.Interface
 {
     public interface IPatientProblem
     {
-        IEnumerable<UserDetails> GetDoctersFromProblem(string problem);
+        IEnumerable<DoctorDetails> GetDoctersFromProblem(string problem, string ipAddress);
+
+        bool ConsultDoctor(int problemId, int doctorId);
     }
 }

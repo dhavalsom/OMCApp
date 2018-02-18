@@ -1,4 +1,4 @@
-﻿@model IEnumerable<OMC.Models.UserDetails>
+﻿@model IEnumerable<OMC.Models.DoctorDetails>
 
 <table class="table">
     <tr>
@@ -14,14 +14,41 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.FirstName) &nbsp; @Html.DisplayFor(modelItem => item.LastName)
-                
+                @Html.DisplayFor(modelItem => item.Doctor)
+
+
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Address)
+                @Html.DisplayFor(modelItem => item.Expertise)
             </td>
-
+            <td>
+                @Html.HiddenFor(i => item.DoctorId)
+                <input type="button" itemid="@item.ProblemId" id="ConsultDoc" value="Consult" />
+            </td>
         </tr>
     }
 
 </table>
+
+<script>
+    $(function () {
+        $("#ConsultDoc").on('click', function (e) {
+            var DoctorId = $(this).closest('td').find("input[type=hidden]").val();
+            var ProblemId = $(this).attr("itemid");
+            $.ajax({
+                url: "ConsultDoctor",
+                type: "GET",
+                data: { DoctorId: DoctorId, ProblemId: ProblemId },
+                success: function (result) {
+                    if (result != "false") {
+                        alert("Your request has been accepted.");
+                        window.location.href = "Index";
+                    }
+                    else {
+                        alert("Something went wrong");
+                    }
+                }
+            });
+        });
+    });
+</script>

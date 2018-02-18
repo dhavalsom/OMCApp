@@ -20,11 +20,11 @@
             this._PatientProblemDAL = patientProblemDAL;
         }
 
-        public IEnumerable<UserDetails> GetDoctersFromProblem(string problem)
+        public IEnumerable<DoctorDetails> GetDoctersFromProblem(string problem, string ipAddress)
         {
             try
             {
-                return this._PatientProblemDAL.GetDoctersFromProblem(problem);
+                return this._PatientProblemDAL.GetDoctersFromProblem(problem, ipAddress);
             }
             catch (Exception ex)
             {
@@ -35,6 +35,11 @@
             {
                 //Log
             }
+        }
+
+        public bool ConsultDoctor(int problemId, int doctorId)
+        {
+            return this._PatientProblemDAL.ConsultDoctor(problemId, doctorId);
         }
     }
 }

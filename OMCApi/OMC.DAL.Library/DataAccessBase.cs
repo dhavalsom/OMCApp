@@ -57,6 +57,22 @@ namespace OMC.DAL.Library
             return !string.IsNullOrWhiteSpace(value) ? value : (object)DBNull.Value;
         }
 
+        protected object Bool(bool? value)
+        {
+            return value.HasValue ? value : (object)DBNull.Value;
+        }
+
+        protected object Integer(int? value)
+        {
+            return value.HasValue ? value : (object)DBNull.Value;
+        }
+
+        protected object Long(long? value)
+        {
+            return value.HasValue ? value : (object)DBNull.Value;
+        }
+
+
         #endregion
     }
 }

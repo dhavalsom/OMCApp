@@ -44,86 +44,73 @@ namespace OMCWebApp.Controllers
                     if (DoctorsResponse != null)
                     {
                         //Deserializing the response recieved from web api and storing into the Employee list  
-                        IEnumerable<UserDetails> Doctors = JsonConvert.DeserializeObject<IEnumerable<UserDetails>>(DoctorsResponse);
+                        IEnumerable<DoctorDetails> Doctors = JsonConvert.DeserializeObject<IEnumerable<DoctorDetails>>(DoctorsResponse);
                         if (Doctors.Count() > 0)
                             return PartialView("DoctorsList", Doctors);
                     }
                 }
-                else
+
+                return Content("false");
+
+            }
+        }
+
+        public async Task<ActionResult> ConsultDoctor(int ProblemId, int DoctorId)
+        {
+            using (var client = new HttpClient())
+            {
+
+                //Passing service base url  
+                client.BaseAddress = new Uri(ConfigurationManager.AppSettings["BaseUrl"]);
+
+                client.DefaultRequestHeaders.Clear();
+                //Define request data format  
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                string url = "api/PatientProblems/ConsultDoctor?problemId=" + ProblemId + "&doctorId=" + DoctorId;
+                HttpResponseMessage Res = await client.GetAsync(url);
+
+                //Checking the response is successful or not which is sent using HttpClient  
+                if (Res.IsSuccessStatusCode)
                 {
-                    var SignInResponse = Res.Content.ReadAsStringAsync().Result;
-                    ViewData["ErrorMessage"] = SignInResponse.ToString();
-                    return View("SignUpFailure");
+                    //Storing the response details recieved from web api   
+                    var DoctorsResponse = await Res.Content.ReadAsStringAsync();
+                    if (DoctorsResponse != null)
+                    {
+                        //Deserializing the response recieved from web api and storing into the Employee list  
+                        return Content(DoctorsResponse);
+                    }
                 }
-                return View("LoginFailure");
+
+                return Content("false");
 
             }
         }
 
-        // GET: PatientProblem/Create
-        public ActionResult Create()
+        /// <summary>
+        /// Gets the IP address.
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>
+        /// IP Address.
+        /// </returns>
+        private string getIPAddress()
         {
-            return View();
-        }
-
-        // POST: PatientProblem/Create
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
-        {
+            string ipaddress;
             try
             {
-                // TODO: Add insert logic here
+                string[] computer_name = System.Net.Dns.GetHostEntry(Request.ServerVariables["remote_addr"]).HostName.Split(new Char[] { '.' });
+                String ecname = System.Environment.MachineName;
+                ipaddress = Request.ServerVariables["HTTP_X_FORWARDED_FOR"];
 
-                return RedirectToAction("Index");
+                if (ipaddress == "" || ipaddress == null)
+                    ipaddress = Request.ServerVariables["REMOTE_ADDR"];
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                throw ex;
             }
-        }
 
-        // GET: PatientProblem/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: PatientProblem/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: PatientProblem/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: PatientProblem/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            return ipaddress;
         }
     }
 }
