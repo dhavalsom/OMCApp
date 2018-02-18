@@ -14,7 +14,7 @@ Problem : <input type="text" id="txtProblem" maxlength="200" /> &nbsp;
     $(function () {
         $("#searchProblem").on('click', function (e) {
             $.ajax({
-                url: "GetDoctorDetails",
+                url: "PatientProblem/GetDoctorDetails",
                 type: "GET",
                 data: { problem: $("#txtProblem").val() },
                 success: function (result) {

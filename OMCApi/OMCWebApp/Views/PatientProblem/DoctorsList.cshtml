@@ -36,13 +36,13 @@
             var DoctorId = $(this).closest('td').find("input[type=hidden]").val();
             var ProblemId = $(this).attr("itemid");
             $.ajax({
-                url: "ConsultDoctor",
+                url: "PatientProblem/ConsultDoctor",
                 type: "GET",
                 data: { DoctorId: DoctorId, ProblemId: ProblemId },
                 success: function (result) {
                     if (result != "false") {
                         alert("Your request has been accepted.");
-                        window.location.href = "Index";
+                        window.location.href = "PatientProblem";
                     }
                     else {
                         alert("Something went wrong");
